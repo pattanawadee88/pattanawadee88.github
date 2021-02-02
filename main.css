@@ -1,0 +1,193 @@
+:root {
+    --backgroundColor: white;
+    --primaryTextColor:  black;
+    --secondaryTextColor: white;
+    --buttonColor: #FC5050;
+    --shadowColor: #C4C4C4;
+    --borderColor: black;
+}
+*{
+    font-family: 'Coiny', cursive;
+    margin: 0;
+    padding: 0;
+}
+body{
+    padding: 2em;
+    background-color: black;
+}
+footer{
+    width: 100%;
+    height: 150px;
+    bottom: 0;
+    grid-area: footer;
+    background-color: blue;
+    border-radius: 0 0 24px 24px;
+}
+a {
+    text-decoration: none;
+    color: var(--primaryTextColor);
+}
+/* typography*/
+h1 { font-size: 3rem;}
+
+/* class: container */
+.main-container {
+    width: 100%;
+    height: 900px;
+    background-color: white;
+    border-radius: 24px 24px 0 0;
+    border-bottom: 5px solid black;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: 100px auto 150px;
+    grid-template-areas: 
+        'nav-container nav-container nav-container'
+        'greeting-container greeting-container greeting-container'
+        'footer footer footer'
+    ;
+}
+.nav-container{
+    top: 0;
+    width: 100%;
+    height: 100px;
+    background-color: white;
+    border-bottom: 5px solid black;
+    align-items: center;
+    border-radius: 24px 24px 0 0;
+    grid-area: nav-container;
+    display: grid;
+    grid-template-columns: 250px auto auto;
+    grid-template-areas: 'browser-btn nav-tap nav-tap';
+    gap: 20px;
+}
+
+.greeting-container {
+    grid-area: greeting-container;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+    grid-template-areas: 'greeting-text-container my-picture-container' ;
+}
+.greeting-text-container{
+    grid-area: greeting-text-container;
+    margin-top: 10em;
+    margin-left: 18em;
+}
+.my-picture-container{
+    margin-top: 5em;
+    margin-left: 10em;
+}
+.greeting-text-container h1{
+    margin-bottom: 0.125em;
+}
+.greeting-text-container p{
+    margin-bottom: 1em;
+}
+.browser-btn-container {
+    display: flex;
+    width: 250px;
+}
+.tap-container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+.projects-container{
+    width: 100%;
+    height: 1200px;
+    background-color: white;
+    border-radius: 0 0 24px 24px;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 200px auto auto;
+    grid-template-areas: 
+        'projects-header'
+        'projects-1-container'
+        'projects-2-container'
+    ;
+}
+
+/* class: elements */
+.my-picture-container{
+    grid-area: my-picture-container;
+    
+}
+.browser-btn{
+    width: 40px;
+    height: 40px;
+    background-color: black;
+    margin-left: 30px;
+    border-radius: 50%;
+    grid-area: browser-btn;  
+}
+
+.nav-tap{
+    width: 100%;
+    margin-left: 1px;
+    /* background-color: green; */
+    text-align: center;  
+    border-radius: 24px 24px 0 0;
+    border: 5px solid black;
+    border-bottom: none;
+    margin-top: 10px;
+    grid-area: nav-tap;
+    color: white;
+    background-color: var(--backgroundColor);
+
+}
+.nav-tap h2 {
+    margin-top: 1.125em;
+    
+}
+.nav-tap:hover {
+    background-color: black;
+}
+.nav-tap:hover a{
+    color: white;
+}
+
+/* id */
+#home-tap{
+    width: 30%;
+}
+#projects-tap{
+    width: 40%;
+}
+#contact-me-btn{
+    border-radius: 24px;
+    background-color: #FC5050;
+    border: none;
+    color: white;
+    padding: 1em;
+}
+#my-picture{
+    width: 80%;
+    height: 500px;
+    border-radius: 50%;
+    border: 5px solid black;
+    object-fit:fill;
+    box-shadow: 5px 5px #C4C4C4;
+    
+}
+#projects-header{
+    width: 100%;
+    grid-area:  projects-header;
+    text-align: center;
+    border: 2px solid chocolate;
+}
+#projects-header h1{
+    font-size: 4rem;
+    margin-top: 2em;
+}
+#projects-1-container{
+    width: 100%;
+    grid-area: projects-1-container;
+    border: 2px solid chocolate;
+}
+#projects-2-container{
+    width: 100%;
+    grid-area: projects-2-container;
+    border: 2px solid chocolate;
+}
