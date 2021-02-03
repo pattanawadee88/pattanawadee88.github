@@ -41,6 +41,7 @@ h3 { font-size: 3rem;}
     box-shadow: 10px 10px black;
 }
 .main-container {
+    width: 100%;
     height: 900px;
     display: grid;
     grid-template-columns: auto auto ;
@@ -99,11 +100,11 @@ h3 { font-size: 3rem;}
 }
 .projects-container{
     display: grid;
-    grid-template-columns: 200px auto;
-    grid-template-rows: 800px 800px ;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto 800px ;
     grid-template-areas: 
-        'projects-header projects-1-container '
-        'projects-header projects-2-container '
+        'projects-header projects-header'
+        'projects-1-container  projects-2-container '
         
     ;
 
@@ -160,22 +161,19 @@ h3 { font-size: 3rem;}
 
 .nav-tap{
     width: 100%;
-    margin-left: 1px;
-    /* background-color: green; */
     text-align: center;  
-    border-radius: 24px 24px 0 0;
+    border-radius: 24px;
     border: 5px solid var(--borderColor);
-    border-bottom: none;
-    margin-top: 10px;
-    padding: 0 1em;
+    margin: 0.5em;
+    padding: 0.4em;
+    padding-bottom: 0.1em;
     grid-area: nav-tap;
     color: var(--secondaryTextColor);
     background-color: var(--secondaryBgColor);
-
+    box-shadow: 5px 1px var(--borderColor);
 }
 .nav-tap h2 {
-    margin-top: 1.125em;
-    
+    margin-top: 0.5em;   
 }
 .nav-tap:hover {
     background-color: var(--mainBgColor);
@@ -183,7 +181,6 @@ h3 { font-size: 3rem;}
 .nav-tap:hover a{
     color: var(--secondaryTextColor);
 }
-
 .btn:hover {
     background-color: var(--mainBgColor);
 }
@@ -192,8 +189,7 @@ h3 { font-size: 3rem;}
     width: fit-content;
 }
 #projects-tap{
-    width: fit-content;
-    
+    width: fit-content;  
 }
 #contact-me-btn{
     border-radius: 8px 8px 30px 8px;
@@ -211,12 +207,10 @@ h3 { font-size: 3rem;}
     /* background-color: var(--mainBgColor); */
     /* text-align: center; */
     margin: 0 auto;
-    writing-mode: vertical-rl;
-    text-orientation: upright;
     
 }
 #projects-title h1{
-    font-size: 7rem;
+    font-size: 4rem;
     margin-top: 1em;
     
 }
