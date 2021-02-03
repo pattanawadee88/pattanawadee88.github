@@ -16,7 +16,12 @@
 body{
     padding: 2em;
     background-color: var(--mainBgColor);
-    color: var(--primaryTextColor);
+    color: var(--primaryTextColor);  
+}
+section {
+    margin: 0 auto;
+    width: 95%;
+    margin-bottom: 3em;
     
 }
 a {
@@ -25,17 +30,18 @@ a {
 }
 
 /* typography*/
-h1 { font-size: 7rem;}
+h1 { font-size: 6rem;}
 h3 { font-size: 3rem;}
 
-
 /* class: container */
-.main-container {
-    width: 100%;
-    height: 900px;
+.main-container,
+.projects-container {
     background-color: var(--secondaryBgColor);
-    border-radius: 24px 24px 0 0;
-    border-bottom: 5px solid #2F302E;
+    border-radius: 24px;
+    box-shadow: 10px 10px black;
+}
+.main-container {
+    height: 900px;
     display: grid;
     grid-template-columns: auto auto ;
     grid-template-rows: 100px auto ;
@@ -44,7 +50,6 @@ h3 { font-size: 3rem;}
         'greeting-container greeting-container greeting-container'
         
     ;
-    overflow: hidden;
 }
 .nav-container{
     top: 0;
@@ -59,9 +64,6 @@ h3 { font-size: 3rem;}
     grid-template-columns: 250px auto auto;
     grid-template-areas: 'browser-btn nav-tap nav-tap';
     gap: 20px;
-    
-    
-
 }
 
 .greeting-container {
@@ -96,9 +98,6 @@ h3 { font-size: 3rem;}
     display: flex;
 }
 .projects-container{
-    width: 100%;
-    background-color: var(--secondaryBgColor);
-    border-radius: 0 0 24px 24px;
     display: grid;
     grid-template-columns: 200px auto;
     grid-template-rows: 800px 800px ;
@@ -209,8 +208,7 @@ h3 { font-size: 3rem;}
     width: fit-content;
     height: 100%;
     grid-area:  projects-header;
-    background-color: var(--mainBgColor);
-    color: var(--secondaryTextColor);
+    /* background-color: var(--mainBgColor); */
     /* text-align: center; */
     margin: 0 auto;
     writing-mode: vertical-rl;
