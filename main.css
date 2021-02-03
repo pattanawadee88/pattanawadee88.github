@@ -21,6 +21,7 @@ a {
     text-decoration: none;
     color: var(--primaryTextColor);
 }
+
 /* typography*/
 h1 { font-size: 7rem;}
 
@@ -32,12 +33,12 @@ h1 { font-size: 7rem;}
     border-radius: 24px 24px 0 0;
     border-bottom: 5px solid black;
     display: grid;
-    grid-template-columns: auto auto auto;
-    grid-template-rows: 100px auto 150px;
+    grid-template-columns: auto auto ;
+    grid-template-rows: 100px auto ;
     grid-template-areas: 
         'nav-container nav-container nav-container'
         'greeting-container greeting-container greeting-container'
-        'footer footer footer'
+        
     ;
     overflow: hidden;
 }
@@ -54,7 +55,7 @@ h1 { font-size: 7rem;}
     grid-template-columns: 250px auto auto;
     grid-template-areas: 'browser-btn nav-tap nav-tap';
     gap: 20px;
-    
+
 }
 
 .greeting-container {
@@ -62,7 +63,6 @@ h1 { font-size: 7rem;}
     width: 100%;
     height: 100%;
     display: grid;
-    /* grid-template-columns: auto auto; */
     grid-template-rows: auto ;
     grid-template-areas: 'greeting-text-container ' ;
 }
@@ -85,55 +85,49 @@ h1 { font-size: 7rem;}
     width: 250px;
 }
 .tap-container{
+    
     width: 100%;
     height: 100%;
     display: flex;
 }
 .projects-container{
     width: 100%;
-    height: 1200px;
     background-color: var(--backgroundColor);
     border-radius: 0 0 24px 24px;
     display: grid;
-    grid-template-columns: auto auto;
-    grid-template-rows: 200px 1000px ;
+    grid-template-columns: 200px auto;
+    grid-template-rows: 800px 800px ;
     grid-template-areas: 
-        'projects-header projects-header'
-        'projects-1-container projects-2-container'
-
+        'projects-header projects-1-container '
+        'projects-header projects-2-container '
+        
     ;
 
 }
 .project-template{
-    width: 80%;
-    height: 600px;
+    width: 90%;
     border: 3px solid black;
-    margin: 0 auto;  
-    border-top: none;
-    margin-top: 8em;
-   
-}
-.project-nav-container{
-    width: 100%;
-    height: 8%;
-    background-color: var(--backgroundColor);
-    border-top: 3px solid black;
-    border-bottom: 3px solid black;
-    align-items: center;
-    display: flex;
+    margin: 0 auto;   
 }
 .project-content-container{
     width: 100%;
     height: 85%;
-    display: flex;
     margin-top: 2em;
+    display: flex;
+}
+.one,
+.two {
+    width: 100%;
+    border: 3px solid orange;
+}
+.project-text{
+    margin: 0 auto;
+    margin-top: 5em;
+    width: fit-content;
+    border: 3px solid grey;
 }
 
 /* class: elements */
-.my-picture-container{
-    grid-area: my-picture-container;
-    
-}
 .browser-btn{
     width: 40px;
     height: 40px;
@@ -152,6 +146,7 @@ h1 { font-size: 7rem;}
     border: 5px solid black;
     border-bottom: none;
     margin-top: 10px;
+    padding: 0 1em;
     grid-area: nav-tap;
     color: white;
     background-color: var(--backgroundColor);
@@ -167,29 +162,17 @@ h1 { font-size: 7rem;}
 .nav-tap:hover a{
     color: white;
 }
-.project-browser-btn{
-    width: 20px;
-    height: 20px;
-    margin-left: 30px;
-    border-radius: 50%;
-}
-.close-btn{
-    background-color: #E76464;
-}
-.expand-btn{
-    background-color: #83DB75;
-}
-.project-content{
-    width: 100%;
-    height: 100%;
-}
 
+.btn:hover {
+    background-color: black;
+}
 /* id */
 #home-tap{
-    width: 30%;
+    width: fit-content;
 }
 #projects-tap{
-    width: 40%;
+    width: fit-content;
+    
 }
 #contact-me-btn{
     border-radius: 24px;
@@ -201,19 +184,37 @@ h1 { font-size: 7rem;}
 
 #projects-title{
     width: fit-content;
+    height: 100%;
     grid-area:  projects-header;
-    text-align: center;
-    border-bottom: 2px solid chocolate;
+    background-color: black;
+    color: var(--secondaryTextColor);
+    /* text-align: center; */
     margin: 0 auto;
+    writing-mode: vertical-rl;
+    text-orientation: upright;
     
 }
 #projects-title h1{
-    font-size: 6rem;
+    font-size: 7rem;
     margin-top: 1em;
     
+}
+#projects-1-container,
+#projects-2-container{
+    margin-top: 3em;
+}
+#projects-1-container {
+    grid-area: projects-1-container;
+}
+#projects-2-container {
+    grid-area: projects-2-container;
 }
 /* bootstrap */
 .card{
     border: none;
+}
+.btn-primary{
+    border: none;
+    background-color: var(--buttonColor);
 }
 
