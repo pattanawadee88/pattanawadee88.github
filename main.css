@@ -1,10 +1,11 @@
 :root {
-    --backgroundColor: white;
-    --primaryTextColor:  black;
+    --mainBgColor: #2F302E;
+    --secondaryBgColor: white;
+    --primaryTextColor:  #2F302E;
     --secondaryTextColor: white;
-    --buttonColor: #FC5050;
-    --shadowColor: #C4C4C4;
-    --borderColor: black;
+    --buttonColor: #ff4e42;
+    --shadowColor: #575856;
+    --borderColor: #2F302E;
 }
 *{
     font-family: 'Coiny', cursive;
@@ -14,7 +15,8 @@
 }
 body{
     padding: 2em;
-    background-color: black;
+    background-color: var(--mainBgColor);
+    color: var(--primaryTextColor);
     
 }
 a {
@@ -31,9 +33,9 @@ h3 { font-size: 3rem;}
 .main-container {
     width: 100%;
     height: 900px;
-    background-color: white;
+    background-color: var(--secondaryBgColor);
     border-radius: 24px 24px 0 0;
-    border-bottom: 5px solid black;
+    border-bottom: 5px solid #2F302E;
     display: grid;
     grid-template-columns: auto auto ;
     grid-template-rows: 100px auto ;
@@ -48,8 +50,8 @@ h3 { font-size: 3rem;}
     top: 0;
     width: 100%;
     height: 100px;
-    background-color: white;
-    border-bottom: 5px solid black;
+    background-color: var(--secondaryBgColor);
+    border-bottom: 5px solid #2F302E;
     align-items: center;
     border-radius: 24px 24px 0 0;
     grid-area: nav-container;
@@ -57,6 +59,8 @@ h3 { font-size: 3rem;}
     grid-template-columns: 250px auto auto;
     grid-template-areas: 'browser-btn nav-tap nav-tap';
     gap: 20px;
+    
+    
 
 }
 
@@ -87,14 +91,13 @@ h3 { font-size: 3rem;}
     width: 250px;
 }
 .tap-container{
-    
     width: 100%;
     height: 100%;
     display: flex;
 }
 .projects-container{
     width: 100%;
-    background-color: var(--backgroundColor);
+    background-color: var(--secondaryBgColor);
     border-radius: 0 0 24px 24px;
     display: grid;
     grid-template-columns: 200px auto;
@@ -126,31 +129,34 @@ h3 { font-size: 3rem;}
     grid-area: project-content-container;
     
 }
-.project-text{
-    margin: 0 auto;
-    margin-top: 5em;
-    width: fit-content;
-    border: 3px solid grey;
-}
 .project-header{
     width: 100%;
     /* background-color: hotpink; */
-    border-bottom: 3px solid black;
+    border-bottom: 3px solid var(--borderColor);
     grid-area: project-header;
 }
 .project-header h3 {
     text-align: right;
     margin-top: 0.75em;
     padding-right: 0.2em;
+
 }
 /* class: elements */
 .browser-btn{
     width: 40px;
     height: 40px;
-    background-color: black;
+    background-color: var(--secondaryBgColor);
     margin-left: 30px;
     border-radius: 50%;
     grid-area: browser-btn;  
+    border: 5px solid var(--borderColor);
+}
+.browser-btn:first-child {
+    background-color: #2F302E;
+}
+.browser-btn:nth-child(2),
+.browser-btn:nth-child(3){
+    box-shadow: 5px 5px var(--borderColor);
 }
 
 .nav-tap{
@@ -159,13 +165,13 @@ h3 { font-size: 3rem;}
     /* background-color: green; */
     text-align: center;  
     border-radius: 24px 24px 0 0;
-    border: 5px solid black;
+    border: 5px solid var(--borderColor);
     border-bottom: none;
     margin-top: 10px;
     padding: 0 1em;
     grid-area: nav-tap;
-    color: white;
-    background-color: var(--backgroundColor);
+    color: var(--secondaryTextColor);
+    background-color: var(--secondaryBgColor);
 
 }
 .nav-tap h2 {
@@ -173,14 +179,14 @@ h3 { font-size: 3rem;}
     
 }
 .nav-tap:hover {
-    background-color: black;
+    background-color: var(--mainBgColor);
 }
 .nav-tap:hover a{
-    color: white;
+    color: var(--secondaryTextColor);
 }
 
 .btn:hover {
-    background-color: black;
+    background-color: var(--mainBgColor);
 }
 /* id */
 #home-tap{
@@ -191,18 +197,19 @@ h3 { font-size: 3rem;}
     
 }
 #contact-me-btn{
-    border-radius: 24px;
+    border-radius: 8px 8px 30px 8px;
     background-color: var(--buttonColor);
-    border: none;
-    color: white;
+    border: 5px solid var(--borderColor);
+    color: var(--secondaryTextColor);
     padding: 1em;
+    box-shadow: 5px 5px var(--borderColor);
 }
 
 #projects-title{
     width: fit-content;
     height: 100%;
     grid-area:  projects-header;
-    background-color: black;
+    background-color: var(--mainBgColor);
     color: var(--secondaryTextColor);
     /* text-align: center; */
     margin: 0 auto;
@@ -225,7 +232,8 @@ h3 { font-size: 3rem;}
 #projects-2-container {
     grid-area: projects-2-container;
 }
-/* bootstrap */
+
+/* bootstrap class*/
 .card{
     border: none;
 }
@@ -233,4 +241,6 @@ h3 { font-size: 3rem;}
     border: none;
     background-color: var(--buttonColor);
 }
-
+.btn:hover {
+    font-size: larger;
+}
