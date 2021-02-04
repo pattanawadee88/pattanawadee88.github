@@ -1,12 +1,14 @@
 :root {
     --mainBgColor: #2F302E;
     --secondaryBgColor: white;
-    /* --cardBgColor: #ffc024; */
     --primaryTextColor:  #2F302E;
     --secondaryTextColor: white;
     --buttonColor: #ff4e42;
+    --secondaryBtnColor: #5BC760;
     --shadowColor: black;
     --borderColor: #2F302E;
+    --projectContentBg: #F0EADE;
+    
 }
 *{
     font-family: 'Coiny', cursive;
@@ -35,7 +37,7 @@ h3 { font-size: 4rem;}
 p { font-size: 3rem;}
 
 /* class: container */
-.main-container {
+.main-container{
     background-color: var(--secondaryBgColor);
     border-radius: 24px;
     box-shadow: 10px 10px var(--shadowColor);
@@ -47,8 +49,7 @@ p { font-size: 3rem;}
     grid-template-areas: 
         'nav-container'
         'social-container '
-        'greeting-container '
-        
+        'greeting-container '   
     ;
     overflow: hidden;
 }
@@ -93,11 +94,10 @@ p { font-size: 3rem;}
 }
 .browser-btn-container {
     display: flex;
-    width: 250px;
+    width: 25%;
 }
 .tap-container{
     width: 100%;
-    /* height: 100%; */
     display: flex;
 }
 
@@ -120,7 +120,6 @@ p { font-size: 3rem;}
 }
 
 .nav-tap{
-    /* width: 100%; */
     text-align: center;  
     border-radius: 24px;
     border: 5px solid var(--borderColor);
@@ -150,14 +149,14 @@ p { font-size: 3rem;}
 .fab:hover {
     color: var(--mainBgColor);
 }
-/* id */
-#home-tap{
-    margin-left: 2em;
+.home-tap{
+    margin-left: 20px;
     width: fit-content;
 }
-#projects-tap{
+.projects-tap{
     width: fit-content;  
 }
+/* id */
 #my-social-media{
     width: 50%;
     display: flex;
@@ -177,53 +176,13 @@ p { font-size: 3rem;}
 #contact-me-btn:hover {
     font-size: 1.8vw;
 }
-#project-title{
-    width: 100%;
-    color: blue;
-    grid-area:  projects-header;
-    /* text-align: center; */
-    
-}
-#projects-title h1{
-    letter-spacing: 30px;
-    background-color: var(--secondaryBgColor);
-    font-size: 5vw;
-    padding: 0.4em;
-    border-radius: 24px;
-    box-shadow: 8px 8px var(--shadowColor);
-    
-}
-.project-img{
-    grid-area: project-img;
-}
-/* bootstrap class*/
-.card {
-    border: none;
-}
-.btn-primary{
-    border: none;
-    background-color: var(--buttonColor);
-    border-radius: 8px 8px 30px 8px;
-    background-color: var(--buttonColor);
-    border: 5px solid var(--borderColor);
-    color: var(--secondaryTextColor);
-    box-shadow: 2px 2px var(--borderColor);
-    margin-left: 4px;
-}
-.btn:hover{
-    border: 5px solid var(--borderColor);
-}
-.card-text{
-    padding: 1em;
-    background-color: var(--cardBgColor);
-    box-shadow: 5px 5px var(--borderColor);
-    font-size: 1rem;
-}
+
+
 /*  */
 
 #project-section{
     width: 100%;
-    background-color: #5BC760;
+    /* background-color: #5BC760; */
     background-color: var(--secondaryBgColor);
     border-radius: 24px;
     box-shadow: 10px 10px var(--shadowColor);
@@ -232,33 +191,69 @@ p { font-size: 3rem;}
 }
 
 .project-template{
-    background-color: green;
     width: 100%;
-    height: 600px;
     overflow: scroll;
-    padding: 3em;
-    
+    padding: 5em;
+    grid-area: project-template;
+    height: 600px;
 }
 .project-content{
+    background-color: var(--projectContentBg);
     margin-bottom: 2em;
-    background-color: navy;
-    width: 100%;
-    height: 300px;
+    margin: 0 auto;
+    width: 70%;
+    height: 400px;
+    margin-bottom: 10em;
+    border: 5px solid var(--borderColor);
+    box-shadow: 15px 12px var(--shadowColor);
+    display: flex;
 }
-
+.project-text-container,
+.project-imag{
+    width: 100%;
+}
+.project-text-container{
+    border-right: 5px solid var(--borderColor);
+}
+.project-imag img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: grayscale(100%);
+    
+}
+.project-title{
+    width: 100%;
+    font-size: 3rem;
+    margin-top: 1em;
+    text-align: center;
+}
+.project-description{
+    font-family: 'Courier New', Courier, monospace;
+    width: 90%;
+    margin: 0 auto;
+    font-size: 16px;
+    text-indent: 50px;
+}
 /* scrollbar */
 .project-template::-webkit-scrollbar-track {
-    border: 1px solid #000;
-    padding: 2px 0;
-    background-color: #404040;
+    border: 2px solid var(--borderColor);
+    /* padding: 2px 0; */
+    background-color: var(--secondaryBgColor);
+  }
+  .project-template::-webkit-scrollbar:horizontal{
+    display: none;
   }
   .project-template::-webkit-scrollbar {
     width: 20px;
   }
-  
   .project-template::-webkit-scrollbar-thumb {
-    border-radius: 10px;
-    box-shadow: inset 0 0 6px rgba(0,0,0,.3);
-    background-color: #737272;
-    border: 1px solid #000;
+    background-color: var(--mainBgColor);
+  }
+  /* Bootstrap */
+  .btn-primary{
+      margin-top: 1em;
+      margin-left: 1em;
+      background-color: var(--secondaryBtnColor);
+      border: none;
   }
