@@ -31,24 +31,17 @@ a {
     color: var(--primaryTextColor);
 }
 
-/* typography*/
-h1 { font-size: 5rem;}
-h2 { font-size: 2rem;}
-p { font-size: 2rem;}
-
 /* class: containers */
 .main-container{
     background-color: var(--secondaryBgColor);
     border-radius: 24px;
     box-shadow: 10px 10px var(--shadowColor);
     width: 100%;
-    height: 900px;
     display: grid;
     grid-template-columns: auto ;
-    grid-template-rows: 100px 70px auto ;
+    grid-template-rows: auto  auto ;
     grid-template-areas: 
         'nav-container'
-        'social-container '
         'greeting-container '   
     ;
     overflow: hidden;
@@ -61,26 +54,26 @@ p { font-size: 2rem;}
     border-radius: 24px 24px 0 0;
     grid-area: nav-container;
     display: flex;   
+    justify-content: space-between;
 }
 .greeting-container {
     grid-area: greeting-container;
-    width: 50%;
-    text-align: left;
+}
+.greeting-text-container{
+    width: fit-content;
     margin: 5em 16em;
 }
-.greeting-container h1{
+.greeting-text-container h1{
+    font-size: 4rem;
     margin-bottom: 0.125em;
 }
-.greeting-container p{
+.greeting-text-container p{
+    font-size: 2rem;
     margin-bottom: 1em;
 }
 .browser-btn-container {
     display: flex;
-    width: 25%;
-}
-.tap-container{
     width: 100%;
-    display: flex;
 }
 .project-text-container,
 .project-imag{
@@ -103,9 +96,9 @@ p { font-size: 2rem;}
     width: 40px;
     height: 40px;
     background-color: var(--secondaryBgColor);
+    margin-top: 2em;
     margin-left: 2em;
     border-radius: 50%;
-    grid-area: browser-btn;  
     border: 5px solid var(--borderColor);
 }
 .browser-btn:first-child {
@@ -116,18 +109,21 @@ p { font-size: 2rem;}
     box-shadow: 5px 5px var(--borderColor);
 }
 .nav-tap{
-    text-align: center;  
+    text-align: center; 
+    width: fit-content; 
     border-radius: 24px;
     border: 5px solid var(--borderColor);
-    margin: 0.5em;
+    margin-left: 2em;
+    margin-top: 0.4em;
+    margin-bottom: 0.4em;
     padding: 0.4em;
-    padding-bottom: 0.1em;
+    padding-bottom: 0.2em;
     grid-area: nav-tap;
     color: var(--secondaryTextColor);
     background-color: var(--secondaryBgColor);
     box-shadow: 5px 1px var(--borderColor);
 }
-.nav-tap h2 {
+.nav-tap h1 {
     margin-top: 0.5em;   
 }
 .nav-tap:hover {
@@ -138,33 +134,6 @@ p { font-size: 2rem;}
 }
 .btn:hover {
     background-color: var(--mainBgColor);
-}
-.home-tap{
-    margin-left: 20px;
-    width: fit-content;
-}
-.projects-tap{
-    width: fit-content;  
-}
-
-/* id */
-#contact-me-btn{
-    border-radius: 8px 8px 30px 8px;
-    background-color: var(--buttonColor);
-    border: 5px solid var(--borderColor);
-    color: var(--secondaryTextColor);
-    padding: 1em;
-    box-shadow: 5px 5px var(--borderColor);
-}
-#contact-me-btn:hover {
-    font-size: 1.8vw;
-}
-#project-section{
-    width: 100%;
-    background-color: var(--secondaryBgColor);
-    border-radius: 24px;
-    box-shadow: 10px 10px var(--shadowColor);
-    width: 100%;   
 }
 .project-template{
     width: 100%;
@@ -195,6 +164,28 @@ p { font-size: 2rem;}
     font-size: 1rem;
 }
 
+/* id */
+#my-resume-btn{
+    width: fit-content;
+    font-size: 1.5rem;
+    border-radius: 8px 8px 30px 8px;
+    background-color: var(--buttonColor);
+    border: 5px solid var(--borderColor);
+    color: var(--secondaryTextColor);
+    padding: 1em;
+    box-shadow: 5px 5px var(--borderColor);
+}
+#my-resume-btn:hover {
+    font-size: 1rem;
+}
+#project-section{
+    width: 100%;
+    background-color: var(--secondaryBgColor);
+    border-radius: 24px;
+    box-shadow: 10px 10px var(--shadowColor);
+    width: 100%;   
+}
+
 /* scrollbar : project*/
 .project-template::-webkit-scrollbar-track {
     border: 2px solid var(--borderColor);
@@ -210,10 +201,40 @@ p { font-size: 2rem;}
     background-color: var(--mainBgColor);
   }
 
-  /* Bootstrap */
-  .btn-primary{
+/* Bootstrap */
+.btn-primary{
       margin-top: 1em;
       margin-left: 1em;
       background-color: var(--secondaryBtnColor);
       border: none;
-  }
+}
+
+/* media queries */
+@media screen and (max-width:1160px){
+    .project-content{
+        flex-direction: column;
+        height: fit-content; 
+    }
+    .project-text-container{
+        border-right: none;
+        border-bottom: 5px solid var(--borderColor);
+    }
+}
+@media screen and (max-width:830px){
+    .greeting-text-container{
+        width: 100%;
+        text-align: center;
+        margin: 6em auto;
+    }
+    .browser-btn:nth-child(2),
+    .browser-btn:nth-child(3){
+        box-shadow: 1px 1px var(--borderColor);
+    }
+    .project-content{
+        width: 100%;
+    }
+    .project-template{
+        padding: 2em;
+    }
+
+}
