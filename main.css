@@ -126,9 +126,7 @@ a {
 }
 .tap-wrapper{
     grid-area: tap-wrapper;
-    /* border: 5px solid gold; */
     display: flex;
-    
 }
 .nav-tap:hover {
     background-color: var(--mainBgColor);
@@ -260,7 +258,14 @@ a {
     .project-template::-webkit-scrollbar-track{
         display: none;
     }
-    .nav-container{
-        display: none;
+    .browser-wrapper{
+        margin-left: 10px;
     }
+    .nav-tap{
+        padding: 0.1em;
+    }
+    .browser-btn{
+        width: 10px;
+    }
+
 }
