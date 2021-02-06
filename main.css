@@ -32,29 +32,36 @@ a {
 }
 
 /* class: containers */
-.main-container{
+.main-container,
+.secondary-container {
     background-color: var(--secondaryBgColor);
-    border-radius: 24px;
     box-shadow: 10px 10px var(--shadowColor);
     width: 100%;
     display: grid;
-    grid-template-columns: auto ;
-    grid-template-rows: auto  auto ;
+    border-radius: 8px 8px 30px 8px;
+    grid-template-rows: 70px  auto ;
+}
+.main-container{
     grid-template-areas: 
         'nav-container'
         'greeting-container '   
-    ;
-    overflow: hidden;
+    ;    
+}
+.secondary-container{
+    grid-template-areas: 
+        'nav-container'
+        'project-template'   
+    ;    
 }
 .nav-container{
+    border-radius: 8px 8px 0 0;
     width: 100%;
     background-color: var(--secondaryBgColor);
     border-bottom: 5px solid var(--borderColor);
-    align-items: center;
-    border-radius: 24px 24px 0 0;
     grid-area: nav-container;
     display: flex;   
-    justify-content: space-between;
+    gap: 20px;
+    align-items: center;
 }
 .greeting-container {
     grid-area: greeting-container;
@@ -70,10 +77,6 @@ a {
 .greeting-text-container p{
     font-size: 2rem;
     margin-bottom: 1em;
-}
-.browser-btn-container {
-    display: flex;
-    width: 100%;
 }
 .project-text-container,
 .project-imag{
@@ -93,38 +96,39 @@ a {
 
 /* class: conmponents */
 .browser-btn{
-    width: 40px;
-    height: 40px;
+    width: 20px;
+    height: 20px;
     background-color: var(--secondaryBgColor);
-    margin-top: 2em;
-    margin-left: 2em;
     border-radius: 50%;
     border: 5px solid var(--borderColor);
+    margin-right: 0.8em;
 }
 .browser-btn:first-child {
     background-color: #2F302E;
 }
 .browser-btn:nth-child(2),
 .browser-btn:nth-child(3){
-    box-shadow: 5px 5px var(--borderColor);
+    box-shadow: 4px 4px var(--borderColor);
 }
 .nav-tap{
     text-align: center; 
-    width: fit-content; 
-    border-radius: 24px;
-    border: 5px solid var(--borderColor);
-    margin-left: 2em;
-    margin-top: 0.4em;
-    margin-bottom: 0.4em;
     padding: 0.4em;
-    padding-bottom: 0.2em;
-    grid-area: nav-tap;
+    border: 5px solid var(--borderColor);
+    margin-right: 1em;
     color: var(--secondaryTextColor);
     background-color: var(--secondaryBgColor);
     box-shadow: 5px 1px var(--borderColor);
 }
-.nav-tap h1 {
-    margin-top: 0.5em;   
+.browser-wrapper{
+    grid-area: browser-wrapper;
+    display: flex;
+    margin-left: 20px;
+}
+.tap-wrapper{
+    grid-area: tap-wrapper;
+    /* border: 5px solid gold; */
+    display: flex;
+    
 }
 .nav-tap:hover {
     background-color: var(--mainBgColor);
@@ -141,6 +145,7 @@ a {
     padding: 5em;
     grid-area: project-template;
     height: 600px;
+    
 }
 .project-content{
     background-color: var(--projectContentBg);
@@ -167,29 +172,29 @@ a {
 /* id */
 #my-resume-btn{
     width: fit-content;
-    font-size: 1.5rem;
+    font-size: 1rem;
     border-radius: 8px 8px 30px 8px;
     background-color: var(--buttonColor);
     border: 5px solid var(--borderColor);
     color: var(--secondaryTextColor);
-    padding: 1em;
+    padding: 0.8em;
     box-shadow: 5px 5px var(--borderColor);
 }
 #my-resume-btn:hover {
-    font-size: 1rem;
+    background-color: var(--mainBgColor);
 }
 #project-section{
     width: 100%;
     background-color: var(--secondaryBgColor);
-    border-radius: 24px;
-    box-shadow: 10px 10px var(--shadowColor);
-    width: 100%;   
+    box-shadow: 10px 10px var(--shadowColor); 
+    
 }
 
 /* scrollbar : project*/
 .project-template::-webkit-scrollbar-track {
     border: 2px solid var(--borderColor);
     background-color: var(--secondaryBgColor);
+    border-radius: 0 0 30px 0;
   }
   .project-template::-webkit-scrollbar:horizontal{
     display: none;
@@ -199,6 +204,7 @@ a {
   }
   .project-template::-webkit-scrollbar-thumb {
     background-color: var(--mainBgColor);
+    border-radius: 30px ;
   }
 
 /* Bootstrap */
@@ -237,4 +243,24 @@ a {
         padding: 2em;
     }
 
+}
+@media screen and (max-width:450px){
+    .greeting-text-container h1{
+        font-size: 2rem;
+    }
+    .greeting-text-container p{
+        font-size: 1rem;
+    }
+    #my-resume-btn{
+        font-size: 1rem;
+    }
+    .project-template{
+        height: auto;
+    }
+    .project-template::-webkit-scrollbar-track{
+        display: none;
+    }
+    .nav-container{
+        display: none;
+    }
 }
