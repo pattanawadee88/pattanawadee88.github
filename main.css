@@ -56,7 +56,8 @@ a {
 .nav-container{
     border-radius: 8px 8px 0 0;
     width: 100%;
-    background-color: var(--secondaryBgColor);
+    
+    /* background-color: var(--secondaryBgColor); */
     border-bottom: 5px solid var(--borderColor);
     grid-area: nav-container;
     display: flex;   
@@ -73,10 +74,13 @@ a {
 .greeting-text-container h1{
     font-size: 4rem;
     margin-bottom: 0.125em;
+    font-family: 'Bungee Shade', Verdana, Geneva, Tahoma, sans-serif;
 }
 .greeting-text-container p{
-    font-size: 2rem;
+    font-size: 1.5rem;
     margin-bottom: 1em;
+    font-family: 'Bungee Shade', Verdana, Geneva, Tahoma, sans-serif;
+
 }
 .project-text-container,
 .project-imag{
@@ -86,6 +90,11 @@ a {
     border-right: 5px solid var(--borderColor);
     padding: 1em;
     text-align: center;
+    background-color: #f2f2fb;
+    background-image:  repeating-linear-gradient(45deg, #d7d8eb 25%, transparent 25%, transparent 75%, #d7d8eb 75%, #d7d8eb), repeating-linear-gradient(45deg, #d7d8eb 25%, #f2f2fb 25%, #f2f2fb 75%, #d7d8eb 75%, #d7d8eb);
+    background-position: 0 0, 20px 20px;
+    background-size: 40px 40px;
+    color: black;
 }
 .project-imag img{
     width: 100%;
