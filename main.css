@@ -5,6 +5,7 @@
     --secondaryTextColor: white;
     --buttonColor: #ff4e42;
     --secondaryBtnColor: #5BC760;
+    --visitedBtnColor: #2F302E;
     --shadowColor: black;
     --borderColor: #2F302E;
     --projectContentBg: #F0EADE;
@@ -221,6 +222,10 @@ a {
       background-color: var(--secondaryBtnColor);
       border: none;
 }
+.btn-primary:visited{
+    background-color: var(--visitedBtnColor);
+}
+
 
 /* media queries */
 @media screen and (max-width:1160px){
