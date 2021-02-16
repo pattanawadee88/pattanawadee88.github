@@ -1,10 +1,9 @@
 :root {
-    --mainBgColor: #2F302E;
+    --mainBgColor: #B48EAE;
     --secondaryBgColor: white;
     --primaryTextColor:  #2F302E;
     --secondaryTextColor: white;
-    --buttonColor: #ff4e42;
-    --secondaryBtnColor: #5BC760;
+    --buttonColor: #AACC00;
     --visitedBtnColor: #2F302E;
     --shadowColor: black;
     --borderColor: #2F302E;
@@ -41,6 +40,7 @@ a {
     display: grid;
     border-radius: 8px 8px 30px 8px;
     grid-template-rows: 70px  auto ;
+    border: 5px solid var(--borderColor);
 }
 .main-container{
     grid-template-areas: 
@@ -91,8 +91,8 @@ a {
     border-right: 5px solid var(--borderColor);
     padding: 1em;
     text-align: center;
-    background-color: #f2f2fb;
-    background-image:  repeating-linear-gradient(45deg, #d7d8eb 25%, transparent 25%, transparent 75%, #d7d8eb 75%, #d7d8eb), repeating-linear-gradient(45deg, #d7d8eb 25%, #f2f2fb 25%, #f2f2fb 75%, #d7d8eb 75%, #d7d8eb);
+    background-color: #ebe2ea;
+    background-image:  repeating-linear-gradient(45deg, #f9f9f9 25%, transparent 25%, transparent 75%, #f9f9f9 75%, #f9f9f9), repeating-linear-gradient(45deg, #f9f9f9 25%, #ebe2ea 25%, #ebe2ea 75%, #f9f9f9 75%, #f9f9f9);
     background-position: 0 0, 20px 20px;
     background-size: 40px 40px;
     color: black;
@@ -219,7 +219,7 @@ a {
 .btn-primary{
       margin-top: 1em;
       margin-left: 1em;
-      background-color: var(--secondaryBtnColor);
+      background-color: var(--buttonColor);
       border: none;
 }
 .btn-primary:visited{
