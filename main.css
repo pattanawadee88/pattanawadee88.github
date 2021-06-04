@@ -4,7 +4,6 @@
     --primaryTextColor:  #2F302E;
     --secondaryTextColor: white;
     --buttonColor: #AACC00;
-    --visitedBtnColor: #2F302E;
     --shadowColor: black;
     --borderColor: #2F302E;
     --projectContentBg: #F0EADE;
@@ -97,7 +96,7 @@ a {
     background-size: 40px 40px;
     color: black;
 }
-.project-imag img{
+/* .project-imag img{
     width: 100%;
     height: 100%;
     object-fit: contain;
@@ -106,7 +105,7 @@ a {
 .project-imag img:hover{
     transition: filter 1s 0.1s;
     filter: grayscale(0);
-}
+} */
 /* class: conmponents */
 .browser-btn{
     width: 20px;
@@ -147,8 +146,15 @@ a {
 .nav-tap:hover a{
     color: var(--secondaryTextColor);
 }
+.btn{
+    color: var(--primaryTextColor);
+}
 .btn:hover {
+    transition: background-color 0.5s ease-in;
     background-color: var(--mainBgColor);
+}
+.uppercase{
+    text-transform: uppercase;
 }
 .project-template{
     width: 100%;
@@ -176,18 +182,18 @@ a {
     /* font-size: 3vw; */
 }
 .logo{
-    width: 4vw;
+    width: 5vw;
 }
 /* id */
 #my-resume-btn,
 #get-to-know-me-btn{
     width: fit-content;
-    margin-left: 1em;
+    margin: 1em;
     font-size: 1rem;
     border-radius: 8px 8px 30px 8px;
     background-color: var(--buttonColor);
     border: 5px solid var(--borderColor);
-    color: var(--secondaryTextColor);
+    color: var(--primaryTextColor);
     padding: 0.8em;
     box-shadow: 5px 5px var(--borderColor);
 }
@@ -226,10 +232,6 @@ a {
       background-color: var(--buttonColor);
       border: none;
 }
-.btn-primary:visited{
-    background-color: var(--visitedBtnColor);
-}
-
 
 /* media queries */
 @media screen and (max-width:1160px){
