@@ -175,7 +175,9 @@ a {
     margin: 0 auto;
     /* font-size: 3vw; */
 }
-
+.logo{
+    width: 4vw;
+}
 /* id */
 #my-resume-btn,
 #get-to-know-me-btn{
@@ -215,7 +217,6 @@ a {
   }
   .project-template::-webkit-scrollbar-thumb {
     background-color: var(--mainBgColor);
-    border-radius: 30px ;
   }
 
 /* Bootstrap */
