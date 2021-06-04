@@ -177,8 +177,10 @@ a {
 }
 
 /* id */
-#my-resume-btn{
+#my-resume-btn,
+#get-to-know-me-btn{
     width: fit-content;
+    margin-left: 1em;
     font-size: 1rem;
     border-radius: 8px 8px 30px 8px;
     background-color: var(--buttonColor);
@@ -187,7 +189,9 @@ a {
     padding: 0.8em;
     box-shadow: 5px 5px var(--borderColor);
 }
-#my-resume-btn:hover {
+#my-resume-btn:hover,
+#get-to-know-me-btn:hover {
+    transition: background-color 0.5s ease-in;
     background-color: var(--mainBgColor);
 }
 #project-section{
