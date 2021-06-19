@@ -12,7 +12,12 @@
     <link href='https://fonts.googleapis.com/css?family=Bungee Shade' rel='stylesheet'>
     <link rel="stylesheet" href="main.css">
 </head>
-<body>
+<body onload="myFunction()">
+    <div id="loader">
+        <div class="loadingbox"></div>
+        <p>Loading..</p>
+    </div>
+
     <section id="home-section" >
         <div class="main-container">
             <div class="nav-container">
@@ -99,7 +104,19 @@
                 </div>  
             </div>
     </section>
-
+    <script>
+        var myVar;
+        
+        function myFunction() {
+          myVar = setTimeout(showPage, 4000);
+        }
+        
+        function showPage() {
+          document.getElementById("loader").style.display = "none";
+          document.querySelector("#home-section").style.display = "block"
+          document.querySelector("#project-section").style.display = "block"
+        }
+        </script>
     
        
 

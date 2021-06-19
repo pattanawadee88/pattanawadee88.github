@@ -203,6 +203,16 @@ a {
     transition: background-color 0.5s ease-in;
     background-color: var(--mainBgColor);
 }
+#home-section,
+#project-section{
+    display: none;
+    position: relative;
+    -webkit-animation-name: animateSlideUp;
+    -webkit-animation-duration: 1s;
+    animation-name: animateSlideUp;
+    animation-duration: 1s
+
+}
 #project-section{
     width: 100%;
     background-color: var(--secondaryBgColor);
@@ -293,3 +303,65 @@ a {
     }
 
 }
+
+#loader{
+    width: 100%;
+    text-align: center;
+    padding: 1em;
+    display: inline-block;
+    vertical-align: top;
+}
+
+#loader .loadingbox{
+    margin: auto;
+    margin-top: 12em;
+    margin-bottom: 0.3em;
+}
+.loadingbox{
+    width: 30px;
+    height: 30px;
+    background-color: var(--primaryTextColor);
+    animation: loading 2s linear 0s 2;
+    -webkit-animation: loading 2s linear 0s 2; 
+}
+/* loading box animation */
+@-webkit-keyframes loading {
+    0% { 
+        -webkit-transform: rotate(0deg);
+        opacity: 0.2; 
+    }
+    50% { 
+        -webkit-transform: rotate(180deg);
+        opacity: 0.6;
+    }
+    100% { 
+        -webkit-transform: rotate(360deg);
+        opacity: 1; }
+    }
+@keyframes loading{
+    0% { 
+        transform: rotate(0deg);
+        opacity: 0.2;
+    }
+    50% { 
+        transform: rotate(180deg);
+        opacity: 0.6;
+    }
+    100% { 
+        transform: rotate(360deg);
+        opacity: 1; 
+    }
+}
+
+/* animateSlideUp */
+/* after loading finished */
+@-webkit-keyframes animateSlideUp {
+    from { bottom:-200px; opacity:0 } 
+    to { bottom:0px; opacity:1 }
+  }
+  
+  @keyframes animateSlideUp { 
+    from{ bottom:-100px; opacity:0 } 
+    to{ bottom:0; opacity:1 }
+  }
+  
