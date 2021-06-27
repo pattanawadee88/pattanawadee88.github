@@ -23,7 +23,7 @@ body{
 }
 section {
     margin: 0 auto;
-    width: 95%;
+    /* width: 100%; */
     margin-bottom: 3em; 
 }
 a {
@@ -33,12 +33,13 @@ a {
 
 /* class: containers */
 .main-container,
-.secondary-container {
+.secondary-container{
     background-color: var(--secondaryBgColor);
     box-shadow: 10px 10px var(--shadowColor);
     width: 100%;
     display: grid;
     border-radius: 8px 8px 30px 8px;
+    grid-template-columns: auto;
     grid-template-rows: 70px  auto ;
     border: 5px solid var(--borderColor);
 }
@@ -57,7 +58,7 @@ a {
 .nav-container{
     border-radius: 8px 8px 0 0;
     width: 100%;
-    
+
     /* background-color: var(--secondaryBgColor); */
     border-bottom: 5px solid var(--borderColor);
     grid-area: nav-container;
@@ -217,6 +218,7 @@ a {
     width: 100%;
     background-color: var(--secondaryBgColor);
     box-shadow: 10px 10px var(--shadowColor); 
+    border-radius: 8px 8px 30px 8px;
     
 }
 
@@ -248,7 +250,7 @@ a {
     color: var(--secondaryTextColor);
 }
 /* media queries */
-@media screen and (max-width:1160px){
+@media screen and (max-width:1130px){
     .project-content{
         flex-direction: column;
         height: fit-content; 
@@ -258,7 +260,7 @@ a {
         border-bottom: 5px solid var(--borderColor);
     }
 }
-@media screen and (max-width:830px){
+@media screen and (max-width:1090px){
     .greeting-text-container{
         width: 100%;
         text-align: center;
