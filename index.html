@@ -12,7 +12,8 @@
     <link href='https://fonts.googleapis.com/css?family=Bungee Shade' rel='stylesheet'>
     <link rel="stylesheet" href="main.css">
 </head>
-<body onload="myFunction()">
+<body onload="pageLoading()">
+
     <div id="loader">
         <div class="loadingbox"></div>
         <p>Loading..</p>
@@ -44,8 +45,52 @@
                     <!-- <a class="btn" id="get-to-know-me-btn" href="" target="_blank">GET TO KNOW ME</a>  -->
                 </div>
             </div>
+
+            <div class="project-template" id="project-section">
+                <h1 class="project-header">Projects</h1>
+                <h2 style="margin:2em 3em; background-color: #AACC00; border-radius: 50%;  width:50px;
+                height:50px; padding: 30px;">1.</h2>
+                <div class="project-content">
+                    <div class="project-text-container">
+                        <h2 class="project-title uppercase">The Gallery</h2>
+                        <p class="project-description">The Gallery is my first project. It is meant to be a place for holding memories through photos which mostly taken by myself. The website is responsive and compatible to all devices.
+                        </p>
+                        <br>
+                        <p class="project-title">Tools: 
+                            <img class="logo" src="./logo/html-logo.svg" alt="">
+                            <img class="logo" src="./logo/css-logo.svg" alt="">
+                            <img class="logo" src="./logo/bootstrap-4-logo.svg" alt="">
+                        </p>
+                        <a href="http://explorethegallery.com" target="_blank" class="btn uppercase btn-primary">Go to Website</a>
+                        <a href="https://github.com/pattanawadee88/the-gallery-website" target="_blank" class="btn uppercase btn-primary">View code</a>
+                    </div>
+                    
+                </div>
+                <h2 style="margin:2em 3em; background-color: #AACC00; border-radius: 50%;  width:50px;
+                height:50px; padding: 30px;">2.</h2>
+                <div class="project-content">
+                    <div class="project-text-container">
+                        <h2 class="project-title uppercase">APalette</h2>
+                        <p class="project-description">APalette is a color palette which provided serverl set of color combinations. 
+                        </p>
+                        <br>
+                        <p lass="project-title">Tools: 
+                            <img class="logo" src="./logo/html-logo.svg" alt="">
+                            <img class="logo" src="./logo/css-logo.svg" alt="">
+                            <img class="logo" src="./logo/javascript-logo.svg" alt="">
+                        </p>
+                       
+                        <a href="https://codepen.io/Patyu/pen/BaWJzWJ" target="_blank"  class="btn uppercase btn-primary">Go to Website</a>
+                        <a href="https://github.com/pattanawadee88/APalette" target="_blank" class="btn uppercase btn-primary">View code</a>
+                    </div>
+                    
+                </div>  
+            </div>
+
         </div>    
     </section>
+
+<!-- 
     <section id="project-section" class="secondary-container" >
             <div class="nav-container">
                 <div class="browser-wrapper">
@@ -98,22 +143,7 @@
                 </div>  
             </div>
     
-    </section>
-    <script>
-        var myVar;
-        
-        function myFunction() {
-          myVar = setTimeout(showPage, 4000);
-        }
-        
-        function showPage() {
-          document.getElementById("loader").style.display = "none";
-          document.querySelector("#home-section").style.display = "block"
-          document.querySelector("#project-section").style.display = "block"
-        }
-        </script>
-    
-       
-
+    </section> -->
+    <script src="App.js"></script>
 </body>
 </html>
