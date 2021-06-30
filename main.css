@@ -1,5 +1,5 @@
 :root {
-    --mainBgColor: #B48EAE;
+    /* --mainBgColor: #B48EAE;
     --secondaryBgColor: white;
     --primaryTextColor:  #2F302E;
     --secondaryTextColor: white;
@@ -7,8 +7,16 @@
     --shadowColor: black;
     --visitedBtn: black;
     --borderColor: #2F302E;
-    --projectContentBg: #F0EADE;
-    
+    --projectContentBg: #F0EADE; */
+    --mainBgColor: black;
+    --secondaryBgColor: white;
+    --textBgColor: #39FF13;
+    --primaryTextColor:  black;
+    --secondaryTextColor: #39FF13;
+    --buttonColor: black;
+    --shadowColor: #39FF13;
+    --borderColor: black;
+
 }
 *{
     font-family: 'Coiny', cursive;
@@ -23,6 +31,7 @@ body{
     padding: 2em;
     background-color: var(--mainBgColor);
     color: var(--primaryTextColor);  
+    border: 0 5px solid var(--borderColor);
 }
 section {
     margin: 0 auto;
@@ -31,7 +40,7 @@ section {
 }
 a {
     text-decoration: none;
-    color: var(--primaryTextColor);
+    color: var(--secondaryTextColor);
 }
 
 /* class: containers */
@@ -42,13 +51,14 @@ a {
     display: grid;
     border-radius: 8px 8px 30px 8px;
     grid-template-columns: auto;
-    grid-template-rows: 70px  auto ;
+    grid-template-rows: 70px  auto auto ;
     border: 5px solid var(--borderColor);
 }
 .main-container{
     grid-template-areas: 
         'nav-container'
-        'greeting-container '   
+        'greeting-container ' 
+        'project-template'  
     ;    
 }
 
@@ -92,11 +102,8 @@ a {
     border-right: 5px solid var(--borderColor);
     padding: 2.2em 2em;
     text-align: center;
-    background-color: #ebe2ea;
-    background-image:  repeating-linear-gradient(45deg, #f9f9f9 25%, transparent 25%, transparent 75%, #f9f9f9 75%, #f9f9f9), repeating-linear-gradient(45deg, #f9f9f9 25%, #ebe2ea 25%, #ebe2ea 75%, #f9f9f9 75%, #f9f9f9);
-    background-position: 0 0, 20px 20px;
-    background-size: 40px 40px;
-    color: black;
+    background-color: var(--mainBgColor);
+    /* color: var(--secondaryBgColor); */
 }
 
 /* .project-imag img{
@@ -119,7 +126,7 @@ a {
     margin-right: 0.8em;
 }
 .browser-btn:first-child {
-    background-color: #2F302E;
+    background-color: var(--buttonColor);
 }
 .browser-btn:nth-child(2),
 .browser-btn:nth-child(3){
@@ -150,9 +157,10 @@ a {
 .nav-tap:hover a{
     color: var(--secondaryTextColor);
 }
-.btn{
+/* .btn{
+    background-color: var(--secondaryBgColor);
     color: var(--primaryTextColor);
-}
+} */
 .btn:hover {
     transition: background-color 0.5s ease-in;
     background-color: var(--mainBgColor);
@@ -163,18 +171,25 @@ a {
 .project-template{
     margin-top: 5em;
     padding: 5em;
+    grid-area: project-template;
 }
 .project-content{
-    background-color: var(--projectContentBg);
+    background-color: black;
     margin: 2em auto;
     width: 80%;
     margin-bottom: 10em;
-    border: 5px solid var(--borderColor);
     box-shadow: 15px 12px var(--shadowColor);
     
 }
 .project-title{
-    width: 100%;
+    width: fit-content;
+    background-color: var(--textBgColor);
+    margin: 1em auto;
+
+}
+.project-tool,
+.project-description{
+    color: var(--secondaryBgColor);
 }
 .project-description{
     font-family: 'Courier New', Courier, monospace;
@@ -194,7 +209,7 @@ a {
     border-radius: 8px 8px 30px 8px;
     background-color: var(--buttonColor);
     border: 5px solid var(--borderColor);
-    color: var(--primaryTextColor);
+    color: var(--secondaryTextColor);
     padding: 0.8em;
     box-shadow: 5px 5px var(--borderColor);
 }
@@ -213,40 +228,20 @@ a {
     animation-duration: 1s
 
 }
-#project-section{
-    width: 100%;
-    background-color: var(--secondaryBgColor);
-    box-shadow: 10px 10px var(--shadowColor); 
-    border-radius: 8px 8px 30px 8px;
-    
-}
-
-/* scrollbar : project*/
-/* .project-template::-webkit-scrollbar-track {
-    border: 2px solid var(--borderColor);
-    background-color: var(--secondaryBgColor);
-    border-radius: 0 0 30px 0;
-  }
-  .project-template::-webkit-scrollbar:horizontal{
-    display: none;
-  }
-  .project-template::-webkit-scrollbar {
-    width: 20px;
-  }
-  .project-template::-webkit-scrollbar-thumb {
-    background-color: var(--mainBgColor);
-  } */
 
 /* Bootstrap */
 .btn-primary{
       margin-top: 1em;
       margin-left: 1em;
-      background-color: var(--buttonColor);
-      border: none;
+      background-color: var(--mainBgColor);
+      border: 1px solid var(--secondaryBgColor);
+      color: var(--secondaryTextColor);
 }
-.btn-primary:visited{
-    background-color: var(--visitedBtn);
-    color: var(--secondaryTextColor);
+.btn-primary:hover,
+#my-resume-btn:hover{
+    border:var(--secondaryBgColor);
+    background-color: var(--secondaryBgColor);
+    color: var(--primaryTextColor);
 }
 /* media queries */
 @media screen and (max-width:1130px){
@@ -321,7 +316,7 @@ a {
 .loadingbox{
     width: 30px;
     height: 30px;
-    background-color: var(--primaryTextColor);
+    background-color: var(--secondaryTextColor);
     animation: loading 2s linear 0s 2;
     -webkit-animation: loading 2s linear 0s 2; 
 }
