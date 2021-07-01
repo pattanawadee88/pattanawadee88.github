@@ -182,6 +182,10 @@ a {
     box-shadow: 10px 10px var(--shadowColor),10px 10px 0px 3px  var(--borderColor),20px 20px var(--shadowColor),20px 20px  0px 3px  var(--borderColor) ;
 
 }
+.project-content:not(:hover){
+    transition: box-shadow 0.3s ease-in-out;
+    box-shadow: none;
+}
 .project-title{
     width: fit-content;
     background-color: var(--textBgColor);
