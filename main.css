@@ -65,8 +65,6 @@ a {
 .nav-container{
     border-radius: 8px 8px 0 0;
     width: 100%;
-
-    /* background-color: var(--secondaryBgColor); */
     border-bottom: 5px solid var(--borderColor);
     grid-area: nav-container;
     display: flex;   
@@ -174,12 +172,15 @@ a {
     grid-area: project-template;
 }
 .project-content{
-    background-color: black;
+    background-color: var(--mainBgColor);
     margin: 2em auto;
     width: 80%;
     margin-bottom: 10em;
-    box-shadow: 15px 12px var(--shadowColor);
-    
+}
+.project-content:hover{
+    transition:  box-shadow 0.3s ease-in;
+    box-shadow: 10px 10px var(--shadowColor),10px 10px 0px 3px  var(--borderColor),20px 20px var(--shadowColor),20px 20px  0px 3px  var(--borderColor) ;
+
 }
 .project-title{
     width: fit-content;
