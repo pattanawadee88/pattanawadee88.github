@@ -51,7 +51,7 @@ a {
     display: grid;
     border-radius: 8px 8px 30px 8px;
     grid-template-columns: auto;
-    grid-template-rows: 70px  auto auto ;
+    grid-template-rows: 70px  auto auto;
     border: 5px solid var(--borderColor);
 }
 .main-container{
@@ -409,4 +409,7 @@ textarea::placeholder{
 }
 .full-width {
     grid-column: 1 / 3;   
+}
+textarea {
+    border-radius: 10px;
 }
