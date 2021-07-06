@@ -1,7 +1,7 @@
 let loadingTime;
         
 function pageLoading() {
-    loadingTime = setTimeout(showPage, 4000);
+    loadingTime = setTimeout(showPage, 1000);
 }
         
 function showPage() {
