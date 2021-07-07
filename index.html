@@ -90,30 +90,29 @@
     </section>
     <div class="form-container">
         <h1>Contact</h1>
-            <form action="/form_page.php">
+            <form action="">
                 <p>
                     <label for="fname" id="fname-label">First Name:</label>
-                    <input type="text" id="fname" name="firstname" placeholder="Pattanawadee">
+                    <input type="text" id="fname" name="firstname" placeholder="First Name" required>
                 </p>
                 <p>
                     <label for="lname" id="lname-label">Last Name:</label>
-                    <input type="text" id="lname" name="lastname" placeholder="Winyarat">
+                    <input type="text" id="lname" name="lastname" placeholder="Last Name" required>
                 </p>
                 <p>
                     <label for="email">Email:</label>
-                    <input type="text" id="email" name="email" placeholder="Email"> 
+                    <input type="text" id="email" name="email" placeholder="Email" required> 
                 </p>
                 <p >
                     <label for="subject">Subject:</label>
-                    <input type="text" id="subject" name="subject" placeholder="Subject" >
+                    <input type="text" id="subject" name="subject" placeholder="Subject" required>
                 </p>
                 <p class="full-width">
                     <label for="Text">More information:</label><br>
-                    <textarea  id="text" name="text" placeholder="Write something.."></textarea>
+                    <textarea  id="text" name="text" placeholder="Write something.." required></textarea>
                 </p>
                 <p>
                     <input class="btn" id="submit-btn" type="submit" value="Submit">
-                    <p id="id"></p>
                 </p>
             </form>
     </div>
