@@ -179,7 +179,7 @@ a {
 .project-content{
     background-color: var(--mainBgColor);
     margin: 2em auto;
-    width: 80%;
+    width: 70%;
     margin-bottom: 10em;
 }
 .project-content:hover,
