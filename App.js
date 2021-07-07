@@ -12,7 +12,7 @@ function showPage() {
     document.querySelector("footer").style.display = "block"
 }
 
-window.onscroll = function() {scrollFunction()};
+window.onscroll = function() {scrollFunction();};
 
 function scrollFunction() {
   if (document.body.scrollTop > 550 || document.documentElement.scrollTop > 550) {
@@ -24,3 +24,4 @@ function scrollFunction() {
   
   }
 }
+
