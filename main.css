@@ -155,12 +155,14 @@ a {
     margin-top: 5em;
     padding: 5em;
     grid-area: project-template;
+  
 }
 .project-content{
     background-color: var(--mainBgColor);
     margin: 2em auto;
     width: 70%;
     margin-bottom: 10em;
+
 }
 .project-content:hover,
 #my-resume-btn:hover,
