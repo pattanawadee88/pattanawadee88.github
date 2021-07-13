@@ -19,11 +19,9 @@ function scrollFunction() {
     document.getElementById("project-header").style.opacity = "1";
     document.getElementById("project-header").style.transition = "opacity 0.5s";
     document.getElementById("project-header").style.transitionTimingFunction = "ease-in"; 
-    document.querySelector(".project-content").style.opacity = "1";
 
   } else{
     document.getElementById("project-header").style.opacity = "0.1";
-    document.querySelector(".project-content").style.opacity = "0.1";
   
   }
 }
