@@ -12,17 +12,4 @@ function showPage() {
     document.querySelector("footer").style.display = "block"
 }
 
-window.onscroll = function() {scrollFunction();};
-
-function scrollFunction() {
-  if (document.body.scrollTop > 650 || document.documentElement.scrollTop > 650) {
-    document.getElementById("project-header").style.opacity = "1";
-    document.getElementById("project-header").style.transition = "opacity 0.5s";
-    document.getElementById("project-header").style.transitionTimingFunction = "ease-in"; 
-
-  } else{
-    document.getElementById("project-header").style.opacity = "0.1";
-  
-  }
-}
 
