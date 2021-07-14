@@ -289,7 +289,12 @@ a {
     .browser-btn{
         width: 10px;
     }
-
+    .form-container{
+        width: 100%;
+    }
+    form{
+        padding: 0;
+    }
 }
 
 #loader{
@@ -363,7 +368,7 @@ a {
 }
 form{
     width: 100%;
-    padding: 2em;
+    /* padding: 2em; */
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 20px;
