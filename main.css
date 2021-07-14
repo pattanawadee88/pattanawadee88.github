@@ -261,7 +261,10 @@ a {
     }
 
 }
-@media screen and (max-width:450px){
+@media screen and (max-width:550px){
+    body{
+        padding: 1em;
+    }
     .greeting-text-container h1{
         font-size: 2rem;
     }
@@ -271,12 +274,12 @@ a {
     #my-resume-btn{
         font-size: 1rem;
     }
-    .project-template{
+    /* .project-template{
         height: auto;
     }
     .project-template::-webkit-scrollbar-track{
         display: none;
-    }
+    } */
     .browser-wrapper{
         margin-left: 10px;
     }
