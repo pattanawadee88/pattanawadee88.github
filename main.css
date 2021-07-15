@@ -81,7 +81,7 @@ a {
 
 }
 .project-header{
-    font-size: 7vw;
+    font-size: 3.5rem;
 }
 .project-text-container,
 .project-imag{
@@ -328,10 +328,10 @@ textarea {
         box-shadow: none;
     }
     body{
-        padding: 1em;
+        padding: 0.4em;
     }
     .greeting-text-container h1{
-        font-size: 2rem;
+        font-size: 2.5rem;
     }
     .greeting-text-container p{
         font-size: 1rem;
@@ -348,7 +348,9 @@ textarea {
     .browser-btn{
         width: 8px;
     }
-    
+    .project-template{
+        padding: 1em;
+    }
     
     
 }
