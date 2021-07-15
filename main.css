@@ -261,7 +261,18 @@ a {
     }
 
 }
+
+/* mobile */
 @media screen and (max-width:600px){
+    .nav-container{
+        display: none;
+    }
+    .main-container{
+        box-shadow: none;
+    }
+    .greeting-container{
+        height: 100vh;
+    }
     body{
         padding: 1em;
     }
