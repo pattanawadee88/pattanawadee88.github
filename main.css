@@ -270,9 +270,6 @@ a {
     .main-container{
         box-shadow: none;
     }
-    .greeting-container{
-        height: 100vh;
-    }
     body{
         padding: 1em;
     }
