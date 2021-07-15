@@ -232,6 +232,57 @@ a {
     background-color: var(--secondaryBgColor);
     color: var(--primaryTextColor);
 }
+
+/* form */
+
+.form-container{
+    width: 80%;
+    height: 300px;
+    color: white;
+    margin: 0 auto;
+    display: none;
+}
+form{
+    width: 100%;
+    /* padding: 2em; */
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+ 
+    
+}
+input[type=text] {
+    border: none;
+    /* background-color: var(--mainBgColor); */
+    border: 2px solid white;
+}
+input[type=submit]{
+    width: 100%;
+}
+input{
+    width: 100%;
+    border-radius: 10px;
+    padding: 1em;
+    outline: none;
+}
+input::placeholder,
+textarea::placeholder{
+    /* padding: 1em; */
+    font-size: 0.8rem;
+}
+
+.full-width {
+    grid-column: 1 / 3;   
+}
+textarea {
+    width: 100%;
+    height: 300px;
+    resize: none;
+    border-radius: 10px;
+    box-sizing: border-box;
+    outline: none;
+    padding: 1em;
+}
 /* media queries */
 @media screen and (max-width:1130px){
     .project-content{
@@ -259,6 +310,9 @@ a {
     .project-template{
         padding: 2em;
     }
+    .form-container{
+        width: 100%;
+    }
 
 }
 
@@ -266,6 +320,9 @@ a {
 @media screen and (max-width:600px){
     .nav-container{
         display: none;
+    }
+    .form-container{
+        width: 100%;
     }
     .main-container{
         box-shadow: none;
@@ -282,12 +339,6 @@ a {
     #my-resume-btn{
         font-size: 1rem;
     }
-    /* .project-template{
-        height: auto;
-    }
-    .project-template::-webkit-scrollbar-track{
-        display: none;
-    } */
     .browser-wrapper{
         margin-left: 10px;
     }
@@ -295,15 +346,10 @@ a {
         padding: 0.1em;
     }
     .browser-btn{
-        width: 10px;
+        width: 8px;
     }
-    .form-container{
-        width: 100%;
-        margin: 0;
-    }
-    form{
-        padding: 0;
-    }
+    
+    
     
 }
 
@@ -369,53 +415,5 @@ a {
   }
   
 
-.form-container{
-    width: 80%;
-    height: 300px;
-    color: white;
-    margin: 0 auto;
-    display: none;
-}
-form{
-    width: 100%;
-    /* padding: 2em; */
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 20px;
- 
-    
-}
-input[type=text] {
-    border: none;
-    /* background-color: var(--mainBgColor); */
-    border: 2px solid white;
-}
-input[type=submit]{
-    width: 100%;
-}
-input{
-    width: 100%;
-    border-radius: 10px;
-    padding: 1em;
-    outline: none;
-}
-input::placeholder,
-textarea::placeholder{
-    /* padding: 1em; */
-    font-size: 0.8rem;
-}
-
-.full-width {
-    grid-column: 1 / 3;   
-}
-textarea {
-    width: 100%;
-    height: 300px;
-    resize: none;
-    border-radius: 10px;
-    box-sizing: border-box;
-    outline: none;
-    padding: 1em;
-}
 
 
