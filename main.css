@@ -64,12 +64,12 @@ a {
     align-items: center;
 }
 .greeting-container {
-    display: flex;
+    /* display: flex; */
     grid-area: greeting-container;
 }
 .greeting-text-container{
     width: fit-content;
-    margin: 5em 8em;
+    margin: 5em 10em;
 }
 .greeting-text-container h1{
     font-size: 4rem;
