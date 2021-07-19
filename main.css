@@ -51,6 +51,8 @@ a {
         'nav-container'
         'greeting-container ' 
         'project-template'  
+        'form-container'
+        'footer'
     ;    
 }
 
@@ -239,14 +241,15 @@ a {
 
 .form-container{
     width: 80%;
-    height: 300px;
     color: white;
-    margin: 0 auto;
+    margin: 1em auto;
     display: none;
+    padding: 2em;
+    grid-area: form-container;
+    /* margin-bottom: 2em; */
 }
 form{
     width: 100%;
-    /* padding: 2em; */
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 20px;
@@ -284,6 +287,13 @@ textarea {
     box-sizing: border-box;
     outline: none;
     padding: 1em;
+}
+
+footer{
+    grid-area: footer;
+    text-align: center;
+    color: white;
+    margin-top: 2em;
 }
 /* media queries */
 @media screen and (max-width:1130px){
@@ -417,29 +427,4 @@ textarea {
     from{ bottom:-100px; opacity:0 } 
     to{ bottom:0; opacity:1 }
   }
-  
-/* todolist */
-
-.todolist{
-    width: 30%; 
-    height: 300px; 
-    background-color: orange;
-    margin-top: 5em;
-    padding: 1em;
-    box-shadow: 5px 5px var(--borderColor);
-   
-}
-.todolist h3{
-    font-size: 1.5rem;
-}
-.todolist-container{
-    padding: 1em;
-}
-.todolist-container button{
-    background-color: var( --buttonSecondaryColor);
-    box-shadow: 5px 5px var(--borderColor);
-}
-#todolist-input{
-    width: 72%;
-    height: 30px;
-}
+ 
