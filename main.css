@@ -363,7 +363,9 @@ footer{
     .project-template{
         padding: 1em;
     }
-    
+    input{
+        height: 30px;
+    }
     
 }
 
