@@ -139,10 +139,6 @@ a {
 .nav-tap:hover a{
     color: var(--secondaryTextColor);
 }
-/* .btn{
-    background-color: var(--secondaryBgColor);
-    color: var(--primaryTextColor);
-} */
 #submit-btn{
     background-color: white;
     border: 2px solid white;
@@ -151,7 +147,14 @@ a {
     transition: background-color 0.5s ease-in;
     background-color: var(--mainBgColor);
 }
-
+.list{
+    margin:2em 3em; 
+    background-color: var(--secondaryTextColor); 
+    border-radius: 50%;  
+    width: 50px;
+    height:50px; 
+    padding: 30px;
+}
 .uppercase{
     text-transform: uppercase;
 }
@@ -184,6 +187,7 @@ a {
     width: fit-content;
     background-color: var(--textBgColor);
     margin: 1em auto;
+    color: var(--primaryTextColor);
 
 }
 .project-tool,
