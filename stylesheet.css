@@ -1,5 +1,6 @@
 :root {
-    --mainBgColor: #EEEDE9;
+    --mainBgColor: black;
+    --secondaryBgColor: white;
     --textBgColor: #39FF13;
     --primaryTextColor:  black;
     --secondaryTextColor: #39FF13;
