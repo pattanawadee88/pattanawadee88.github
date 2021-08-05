@@ -92,7 +92,7 @@ a {
     width: 100%;
 }
 .project-text-container{
-    border-right: 5px solid var(--borderColor);
+    border: 5px solid var(--borderColor);
     padding: 2.2em 2em;
     text-align: center;
     background-color: var(--mainBgColor);
@@ -190,10 +190,10 @@ a {
     color: var(--primaryTextColor);
 
 }
-.project-tool,
+/* .project-tool,
 .project-description{
     color: var(--secondaryBgColor);
-}
+} */
 .project-description{
     font-family: 'Courier New', Courier, monospace;
     width: 90%;
