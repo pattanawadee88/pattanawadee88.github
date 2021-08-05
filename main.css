@@ -334,7 +334,8 @@ footer{
 
 /* mobile */
 @media screen and (max-width:600px){
-    .nav-container{
+    .nav-container,
+    .list{
         display: none;
     }
     .form-container{
@@ -348,12 +349,6 @@ footer{
     }
     .greeting-text-container h1{
         font-size: 3.1rem;
-    }
-    .greeting-text-container p{
-        font-size: 1rem;
-    }
-    #my-resume-btn{
-        font-size: 1rem;
     }
     .browser-wrapper{
         margin-left: 10px;
@@ -370,6 +365,10 @@ footer{
     input{
         height: 30px;
     }
+    .project-content{
+        margin-bottom: 0;
+    }
+    
     
 }
 
