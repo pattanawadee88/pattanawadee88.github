@@ -171,6 +171,7 @@ a {
     margin-bottom: 10em;
 
 }
+
 .project-content:hover,
 #my-resume-btn:hover,
 #submit-btn:hover{
@@ -190,16 +191,17 @@ a {
     color: var(--primaryTextColor);
 
 }
-/* .project-tool,
+.project-tool,
 .project-description{
     color: var(--secondaryBgColor);
-} */
+}
 .project-description{
     font-family: 'Courier New', Courier, monospace;
     width: 90%;
     margin: 0 auto;
     /* font-size: 3vw; */
 }
+
 .logo{
     width: 5vw;
 }
