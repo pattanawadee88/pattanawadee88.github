@@ -2,152 +2,105 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PW</title>
-    <link rel="shortcut icon" href="/logo/recent-logo.svg" type="image/x-icon">
-    <!-- <script src="https://kit.fontawesome.com/a076d05399.js"></script> -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <!-- Google fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Coiny&display=swap" rel="stylesheet">
-    <link href='https://fonts.googleapis.com/css?family=Bungee Shade' rel='stylesheet'>
-    <link rel="stylesheet" href="stylesheet.css">
+    <title>PattanawadeeW</title>
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="./logo/recent-logo.svg" type="image/x-icon">
+    <!-- Google icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Playfair+Display:ital,wght@1,800&family=Sansita&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Londrina+Outline&display=swap" rel="stylesheet">
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
 </head>
-<body onload="pageLoading()">
+<body>
 
-    <div id="loader">
-        <div class="loadingbox"></div>
-        <p style="color: white;">Loading..</p>
-    </div>
-<!-- 
-    <main>
+    <header id="main-nav">
+        <img id="my-logo" src="./logo/recent-logo.svg" alt="My-logo">
         <nav>
             <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Projects</a></li>
-                <li><a href="#">About</a></li>
+                <li><a class="navie" id="home-nav" href="#hero-header">Home</a></li>
+                <li><a class="navie" id="about-nav"   href="#about">About</a></li>
+                <li><a class="navie" href="#projects-container">Projects</a></li>
             </ul>
         </nav>
+    </header>
 
+    <a id="ham-nav" onclick="displayNav()"><i class="material-icons" id="menu">menu</i></a>
+
+
+    <main>
         <section id="hero-header">
-            <div>
-                <h1>Hello!</h1>
+            <div id="hero-text">
+                <h1>Hi,there! <br> I'm Pat.</h1>
+                <p>Based in Boston</p>
             </div>
-            <div>
-                image
-            </div>
-            <div id="sub-nav">
-                <div><a href="#">1</a></div>
-                <div><a href="#">1</a></div>
-                <div><a href="#">1</a></div>
+            <div id="social">
+                <a target="_blank" id="resume-btn" href="./file/MyResume.pdf">Resume</a>
+                <a target="_blank" id="linkedin-btn" href="https://www.linkedin.com/in/pattanawadeewinyarat/">LinkedIn</a>
+                <a target="_blank" id="gtihub-btn" href="https://github.com/pattanawadee88">Github</a>
             </div>
         </section>
 
-        <section id="about-me">
-            hhi
+        <section id="about">
+            <h6>&#10077; ME, MYSELF, My self-description &#9829;</h6>
+            <h3>Pattanawadee</h3>
+            <p>&#10149; Frontend Developer</p>
+            <p>&#10149; Software Engineering</p>
+            <p>&#10149; Daughter &amp; Sister </p>
+            <p>&#10149; An OPTIMIST &#9788; </p>
         </section>
-    </main> -->
 
-    <section id="home-section" >
-        <div class="main-container">
-            <div class="nav-container">
-                <div class="browser-wrapper">
-                    <div class="browser-btn"></div>
-                    <div class="browser-btn"></div>
-                    <div class="browser-btn"></div>
-                </div>
-                <div class="tap-wrapper">
-                    <div class="nav-tap btn home-tap" >
-                        <a class="uppercase" href="#home-section">Home</a>
+  
+        <section id="projects-container">
+            <h2>Projects</h2> 
+            <div class="row row-cols-1 row-cols-md-3 g-4">
+                <div class="col">
+                  <div class="card h-30">
+                    <div class="card-body">
+                      <h5 class="card-title">APalette:</h5>
+                      <p class="card-text">APalette is a single page web application. This project is built for users to pick the right color palette for their web design.</p>
+                      <button type="button" class="btn "><a href="https://github.com/pattanawadee88/APalette">View on Github</a></button>
                     </div>
-                    <div class="nav-tap btn projects-tap" >
-                        <a class="uppercase" href="#project-section">Projects</a>
+                    <a target="_blank" href="https://pattanawadee88.github.io/APalette/"><img src="./images/project1_1.png" class="card-img-bottom" alt="APalette project"></a>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card h-30">
+                    <a target="_blank" href="https://pattanawadee88.github.io/Tipcalculatorapp/"><img src="./images/project2_1.png" class="card-img-top" alt="Tip calculator project"></a>
+                    <div class="card-body">
+                      <h5 class="card-title">Tip Calculator:</h5>
+                      <p class="card-text">This is a small application that lets a user to calculate tip.</p>
+                      <button type="button" class="btn "><a href="https://github.com/pattanawadee88/Tipcalculatorapp">View on Github</a></button>
                     </div>
+                  </div>
                 </div>
-            </div>
-            <div class="greeting-container">
-                <div class="greeting-text-container">
-                    <h1>HI THERE,</h1>
-                    <h1>I'M PAT.</h1>
-                    <p>SOFTWARE ENGINEER  <br> FRONTEND DEVELOPER</p>
-                    <a id="my-resume-btn" href="/file/MyResume.pdf" target="_blank">MY RESUME</a> 
+                <div class="col">
+                  <div class="card h-30">
+                    <div class="card-body">
+                      <h5 class="card-title">The News:</h5>
+                      <p class="card-text">TheNews is a news website that integrating with a New York news API.</p>
+                      <button type="button" class="btn "><a href="https://github.com/pattanawadee88/TheNews">View on Github</a></button>
+                    </div>
+                    <a target="_blank" href="https://pattanawadee88.github.io/TheNews/"><img src="./images/project3.png" class="card-img-bottom" alt="TheNews project"></a>
+                  </div>
                 </div>
-            </div>
+              </div>
+        </section>
+    </main>
 
-            <div class="project-template" id="project-section">
-                <h1 class="project-header">Projects</h1>
-                    <div class="project-content">
-                        <a href="https://pattanawadee88.github.io/APalette/" target="_blank">
-                            <div class="project-text-container">
-                                <h2 class="project-title uppercase">APalette</h2>
-                                <p class="project-description">APalette is a color palette which provided serverl set of color combinations. 
-                                </p>
-                                <br>
-                                <p class="project-tool">Tools: 
-                                    <img class="logo" src="./logo/html-logo.svg" alt="Html Logo">
-                                    <img class="logo" src="./logo/css-logo.svg" alt="CSS Logo">
-                                    <img class="logo" src="./logo/javascript-logo.svg" alt="Javascript Logo">
-                                </p>
-                            
-                                <a href="https://pattanawadee88.github.io/APalette/" target="_blank"  class="btn uppercase btn-primary">Launch site</a>
-                                <a href="https://github.com/pattanawadee88/APalette" target="_blank" class="btn uppercase btn-primary">View code</a>
-                            </div>
-                        </a>
-                    </div>
-                  
-                
-                <div class="project-content">
-                    <a href="http://explorethegallery.com" target="_blank" >
-                        <div class="project-text-container">
-                            <h2 class="project-title uppercase">The Gallery</h2>
-                            <p class="project-description">The Gallery is my first project. It is meant to be a place for holding memories through photos which mostly taken by myself.
-                            </p>
-                            <br>
-                            <p class="project-tool">Tools: 
-                                <img class="logo" src="./logo/html-logo.svg" alt="Html Logo">
-                                <img class="logo" src="./logo/css-logo.svg" alt="CSS Logo">
-                                <img class="logo" src="./logo/bootstrap-4-logo.svg" alt="Javascript Logo">
-                            </p>
-                            <a href="http://explorethegallery.com" target="_blank" class="btn uppercase btn-primary">Launch site</a>
-                            <a href="https://github.com/pattanawadee88/the-gallery-website" target="_blank" class="btn uppercase btn-primary">View code</a>
-                        </div> 
-                    </a> 
-                </div>
-            </div>
-        </div>    
-    </section>
-    <div class="form-container">
-        <h1>Contact</h1>
-            <form action="https://formspree.io/f/mzbyazwr" method="post">
-                <p>
-                    <label for="fname" id="fname-label">First Name:</label>
-                    <input type="text" id="fname" name="fname" placeholder="First Name" required>
-                </p>
-                <p>
-                    <label for="lname" id="lname-label">Last Name:</label>
-                    <input type="text" id="lname" name="lastname" placeholder="Last Name" required>
-                </p>
-                <p>
-                    <label for="email">Email:</label>
-                    <input type="text" id="email" name="email" placeholder="Email" required> 
-                </p>
-                <p >
-                    <label for="subject">Subject:</label>
-                    <input type="text" id="subject" name="subject" placeholder="Subject" required>
-                </p>
-                <p class="full-width">
-                    <label for="Text">More information:</label><br>
-                    <textarea  id="text" name="text" placeholder="Write something.." required></textarea>
-                </p>
-                <p>
-                    <input class="btn" id="submit-btn" type="submit" value="Submit" alt="Submit" >
-                </p>
-            </form>
-    </div>
     <footer>
-        @2021 Designed & Built By Pattanawadee
-    </footer> 
-    
-    <script src="App.js"></script>
+        <p>@2021 Designed & Buit By Pattanawadee</p>
+    </footer>
+
+    <script src="./App.js"></script>
 </body>
 </html>
