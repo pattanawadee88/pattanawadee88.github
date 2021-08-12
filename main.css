@@ -42,6 +42,7 @@ nav ul li{
 }
 p{
     font-family: "Courier New", Courier, monospace;
+
 }
 #main-nav{
     margin-top: 1em;
@@ -52,8 +53,10 @@ p{
     height: 60px;
    
 }
-#ham-nav i{
+#ham-nav {
     margin: 1em;
+    border: none;
+    background-color: unset;
 
 }
 #hero-header{
@@ -106,13 +109,14 @@ h1{
 #about{
     padding:1em;
     text-align: center;
+    font-size: 2vw;
 } 
 h6{ 
-    font-size: 1.3vw;
+    font-size: 2.6vw;
 }
 h3{
     font-family: 'Sansita', sans-serif;
-    font-size: 10vw;
+    font-size: 11vw;
 }
 #projects-container{
     padding: 1.3em;
