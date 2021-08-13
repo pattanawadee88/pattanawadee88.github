@@ -65,7 +65,6 @@ p{
     font-family: "Courier New", Courier, monospace;
 }
 #hero-header{
-    height: 80vh;
     display: grid;
     grid-template-columns: 1fr 1fr ;
     background-image: url(./images/sunflowers.jpeg);
