@@ -102,11 +102,11 @@ h1{
     padding: 0.2em;
     text-align: center;
 }
-#social a:hover,
+/* #social a:hover,
 #main-nav li:hover{
     background-color: var(--secondaryBgColor);
     
-}
+} */
 #gtihub-btn{
     border-right: 2px solid black;
 }
@@ -136,7 +136,15 @@ h3{
     font-size: 4vw;
     color: black;
 }
-
+/* #projects-container{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+} */
+.my{
+    display: flex;
+    flex-direction: column;
+}
 .flex-wrapper{
     margin-top: 2em;
     display: flex;
@@ -165,9 +173,13 @@ footer p{
     background-color: white;
     border: 2px solid black;
 }
-.btn:hover{
+.btn:hover,
+#social a:hover,
+#main-nav li:hover{
     background-color: var(--secondaryBgColor);
+    transition:  background-color 1s ease-in;
 }
+
 @media screen and (min-width: 600px) {
     #ham-nav{
         display: none;
@@ -209,5 +221,9 @@ footer p{
         width: 100%;
         height: 100%;
     
+    }
+   
+    .my{
+        flex-direction: row;
     }
 }
