@@ -15,27 +15,17 @@ body{
     position: relative;
     background-color: var(--primaryBgColor);
 }
-header{
-    display: block;
-    height: auto;
-    /* width: 100vw;  */
-    /* height: 100vh; */
-    /* position: absolute; */
-    text-align: center;
-    /* background-color: #57a0d3; */
-}
-img{
-    width: 100%;
-}
+
 #main-nav{
+    grid-column: 2/3;
+    height: auto;
     box-sizing: border-box;
     display: flex;
+    /* justify-content: space-evenly; */
     justify-content: flex-end;
     align-items: center;
-    /* padding: 0.3em 4em; */
-    /* position: sticky; */
     top: 0;
-    margin-top: 1em;
+    margin: 1em;
 }
 
 section{
@@ -49,42 +39,45 @@ a{
     cursor:pointer;
 }
 nav ul{
-    display: flex;
+    /* display: flex; */
     margin-bottom: 0;
     padding: 0;
 }
 nav ul li{
-    padding: 0.2em; 
-    margin-left: 0.1em;
+    /* padding: 0.5em; 
+    margin-left: 1em; */
     list-style: none;
-    border: 2px solid black;
+    /* border: 2px solid black;
+    background-color: var(--primaryBgColor); */
 } 
 #main-nav a{
     text-decoration: none;
-    /* padding: 1em; */
+    color: var(--secondaryTextColor);
+    padding: 1em;
 } 
 p{
     font-family: "Courier New", Courier, monospace;
 }
 #hero-header{
-    display: grid;
-    grid-template-columns: 1fr 1fr ;
     background-image: url(./images/sunflowers.jpeg);
+    height: 100vh;
     background-position: center;
-    box-sizing: border-box;
-    padding: 0.5em;
-    margin-top: 1em;
+    padding: 1em;
+    
+
 }
 #hero-text{
-    grid-column: 1/3;
-    margin: 2em;
+    grid-column: 1/2;
+    margin:2em;
+    z-index: 1;
+    
 }
 #hero-text h1,
 #hero-text p{
     color: #EEEDE9;
 }
 h1{
-    font-size: 12vw;
+    font-size: 14vw;
     font-weight: 700;
     font-family: 'Playfair Display', serif;
 
@@ -95,14 +88,16 @@ h1{
    display: flex;
    background-color: var(--primaryBgColor);
    height: fit-content;
+   align-items: flex-end;
 }
 #social a{
     width: 100%;
     border-top: 2px solid black;
     border-bottom: 2px solid black;
     border-left: 2px solid black;
-    padding: 0.2em;
+    padding: 1em;
     text-align: center;
+    font-size: 1.7vw;
 }
 /* #social a:hover,
 #main-nav li:hover{
@@ -131,8 +126,12 @@ h3{
 }
 #projects-container{
     /* position: absolute; */
-    margin-top: 10em;
+    margin-top: 6em;
     padding: 1.3em;
+}
+.col{
+    border-bottom: 3px solid black;
+    padding-bottom: 1.2em;
 }
 .card{
     border: 3px solid black;
@@ -143,15 +142,7 @@ h3{
     font-size: 4vw;
     color: black;
 }
-/* #projects-container{
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-} */
-.my{
-    display: flex;
-    flex-direction: column;
-}
+
 .flex-wrapper{
     margin-top: 2em;
     display: flex;
@@ -186,14 +177,39 @@ footer p{
     background-color: var(--secondaryBgColor);
     transition:  background-color 1s ease-in;
 }
-
-@media screen and (min-width: 600px) {
-    main{
-        margin: 1em;
+.scroll {
+    opacity: 0;
+    transition: opacity 500ms;
+}
+.scroll.scrolled {
+    opacity: 1;
+  }
+  .scrolled.slide-left {
+    animation: slide-in-left 1s ease-in-out both;
+  }
+   
+  .scrolled.slide-right {
+    animation: slide-in-right 1s ease-in-out both;
+  }
+   
+  @keyframes slide-in-left {
+    0% {
+      transform: translateX(-100px);
+      opacity: 0;
     }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+@media screen and (min-width: 600px) {
     #main-nav{
         padding: 0.3em 1em;
         top: 0;
+        justify-content: flex-end;
+    }
+    #hero-header{
+        height: fit-content;
     }
     #about{
         text-align: right;

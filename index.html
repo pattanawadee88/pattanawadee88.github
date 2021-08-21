@@ -24,7 +24,7 @@
 </head>
 <body>
   
-    <header id="main-nav">
+    <!-- <header id="main-nav">
         <nav>
             <ul>
                 <li><a class="navie" id="home-nav" href="#hero-header">Home</a></li>
@@ -32,24 +32,34 @@
                 <li><a class="navie" href="#projects-container">Projects</a></li>
             </ul>
         </nav>
-    </header>
+    </header> -->
 
   
     <main>
         <section id="hero-header">
-            <div id="hero-text">
+            <!-- <header id="main-nav"> -->
+              <nav id="main-nav">
+                  <ul>
+                      <li><a class="navie" id="home-nav" href="#hero-header">Home</a></li>
+                      <li><a class="navie" id="about-nav"   href="#about">About</a></li>
+                      <li><a class="navie" href="#projects-container">Projects</a></li>
+                  </ul>
+              </nav>
+            <!-- </header> -->
+            <div id="hero-text" class="scroll slide-left">
                 <h1>Hi,there! <br> I'm Pat.</h1>
                 <p>who enjoy making Responsive Websites</p>
                 <p>Based in Boston</p>
+                <div id="social">
+                  <a target="_blank" id="resume-btn" href="./file/MyResume.pdf">Resume</a>
+                  <a target="_blank" id="linkedin-btn" href="https://www.linkedin.com/in/pattanawadeewinyarat/">LinkedIn</a>
+                  <a target="_blank" id="gtihub-btn" href="https://github.com/pattanawadee88">Github</a>
+                </div>
             </div>
-            <div id="social">
-                <a target="_blank" id="resume-btn" href="./file/MyResume.pdf">Resume</a>
-                <a target="_blank" id="linkedin-btn" href="https://www.linkedin.com/in/pattanawadeewinyarat/">LinkedIn</a>
-                <a target="_blank" id="gtihub-btn" href="https://github.com/pattanawadee88">Github</a>
-            </div>
+           
         </section>
 
-        <section id="about">
+        <section id="about" class="scroll">
           <article>
             <h6>&#10077; ME, MYSELF, My self-description</h6>
             <h3>Pattanawadee</h3>
@@ -62,23 +72,8 @@
         </section>
 
   
-        <section id="projects-container" >
+        <section id="projects-container" class="scroll">
             <h2>Projects</h2> 
-            <!-- <div class="my" >
-              <a target="_blank" href="https://pattanawadee88.github.io/APalette/"><img src="./images/project1_1.png" style="width: auto;" alt="APalette project"></a>
-              <div>
-                <h5>APalette:</h5>
-                <p>APalette is a single page web application. This project is built for users to pick the right color palette for their web design.</p>
-              </div>
-            </div>
-            <div class="my" >
-              <div>
-                <h5>APalette:</h5>
-                <p>APalette is a single page web application. This project is built for users to pick the right color palette for their web design.</p>
-              </div>
-              <a target="_blank" href="https://pattanawadee88.github.io/APalette/"><img src="./images/project1_1.png" style="width: auto;" alt="APalette project"></a>
-              
-            </div> -->
             <div class="row row-cols-1 row-cols-md-3 g-4">
                 <div class="col">
                   <div class="card h-30">
