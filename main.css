@@ -77,7 +77,8 @@ p{
     height: 70vh;
     flex-direction: column;
     z-index: 1;
-    
+    animation: slide-in-left 1.2s ease-in-out both 0.2s ;
+
 }
 #hero-text h1,
 #hero-text p{
@@ -110,6 +111,7 @@ h1{
     border-right: 2px solid black;
 }
 #about{
+   
     padding:4em 2em;
     text-align: center;
     width: 100%;
@@ -207,6 +209,9 @@ footer p{
     #hero-header,
     #hero-text{
         height: fit-content;
+    }
+    #about{
+        margin-top: 9em;
     }
     /* #main-nav{
         padding: 0.3em 1em;

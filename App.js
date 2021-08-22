@@ -1,4 +1,4 @@
-// const scrollOffset = 120;
+// const scrollOffset = 90;
  
 // const scrollElement = document.querySelector(".scroll");
  
@@ -32,13 +32,17 @@
 // })
 
 const scrollElements = document.querySelectorAll(".scroll");
-
-const elementInView = (el, dividend = 1) => {
+const pro = document.querySelector("#projects-container")
+const length = pro.getBoundingClientRect().top;
+console.log(window.innerHeight)
+console.log(length)
+const scrollOffset = 300;
+const elementInView = (el, offset) => {
   const elementTop = el.getBoundingClientRect().top;
-
+  
   return (
     elementTop <=
-    (window.innerHeight || document.documentElement.clientHeight) / dividend
+    ((window.innerHeight || document.documentElement.clientHeight) - offset)
   );
 };
 
@@ -60,7 +64,7 @@ const hideScrollElement = (element) => {
 
 const handleScrollAnimation = () => {
   scrollElements.forEach((el) => {
-    if (elementInView(el, 1.25)) {
+    if (elementInView(el, scrollOffset)) {
       displayScrollElement(el);
     } else if (elementOutofView(el)) {
       hideScrollElement(el)
