@@ -20,17 +20,17 @@ body{
     grid-column: 2/3;
     height: auto;
     box-sizing: border-box;
-    display: flex;
+    /* display: flex; */
     /* justify-content: space-evenly; */
-    justify-content: flex-end;
-    align-items: center;
+    /* justify-content: flex-end;
+    align-items: center; */
     top: 0;
     margin: 1em;
 }
 
 section{
-    margin-bottom: 5em;
-    box-sizing: border-box;
+    /* margin-bottom: 5em; */
+    /* box-sizing: border-box; */
     background-color: var(--primaryBgColor);
 }
 a{
@@ -39,7 +39,8 @@ a{
     cursor:pointer;
 }
 nav ul{
-    /* display: flex; */
+    display: flex;
+    justify-content: space-evenly;
     margin-bottom: 0;
     padding: 0;
 }
@@ -68,7 +69,11 @@ p{
 }
 #hero-text{
     grid-column: 1/2;
-    margin-top:5em;
+    justify-content: center;
+    /* margin-top:5em; */
+    display: flex;
+    height: 80vh;
+    flex-direction: column;
     z-index: 1;
     
 }
@@ -97,24 +102,20 @@ h1{
     border-left: 2px solid black;
     padding: 1em;
     text-align: center;
-    font-size: 1.7vw;
+    font-size: 2vw;
 }
-/* #social a:hover,
-#main-nav li:hover{
-    background-color: var(--secondaryBgColor);
-    
-} */
 #gtihub-btn{
     border-right: 2px solid black;
 }
 #about{
-    padding:1em;
+    padding:4em 2em;
     text-align: center;
     width: 100%;
-    font-size: 3.2vw;
-
+    /* font-size: 3.2vw; */
 } 
-
+#about article{
+    width: 100%;
+}
 h6{ 
     font-size: 2.4vw;
     color: black;
@@ -126,7 +127,6 @@ h3{
 }
 #projects-container{
     /* position: absolute; */
-    margin-top: 6em;
     padding: 1.3em;
 }
 
