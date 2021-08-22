@@ -40,7 +40,7 @@ a{
 }
 nav ul{
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     margin-bottom: 0;
     padding: 0;
 }
@@ -61,7 +61,9 @@ p{
 }
 #hero-header{
     background-image: url(./images/sunflowers.jpeg);
-    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 80vh;
     background-position: center;
     padding: 1em;
     
@@ -72,7 +74,7 @@ p{
     justify-content: center;
     /* margin-top:5em; */
     display: flex;
-    height: 80vh;
+    height: 70vh;
     flex-direction: column;
     z-index: 1;
     
@@ -123,7 +125,7 @@ h6{
 }
 h3{
     color: black;
-    font-size: 11vw;
+    font-size: 9vw;
 }
 #projects-container{
     /* position: absolute; */
@@ -201,32 +203,40 @@ footer p{
       opacity: 1;
     }
   }
-@media screen and (min-width: 600px) {
-    #main-nav{
+@media screen and (min-width: 800px) {
+    #hero-header,
+    #hero-text{
+        height: fit-content;
+    }
+    /* #main-nav{
         padding: 0.3em 1em;
         top: 0;
+        display: flex;
         justify-content: flex-end;
     }
     #hero-header{
         height: fit-content;
+        margin-bottom: 5em;
     }
     #about{
         text-align: right;
     }
     nav ul{
-        display: flex;
-        margin-bottom: 0;
+        position: fixed;
+     
        
-    }
+    } */
     nav ul li{
-        padding: 10px;
-        margin-left: 10px;
+        /* padding: 10px; */
+        margin: 1em;
         list-style: none;
-        border: 2px solid black;
+        
+        /* border: 2px solid white; */
     } 
     #main-nav a{
         text-decoration: none;
-        padding: 1em;
+        padding: 0.5em;
+        
     } 
     .grid-wrapper{
         /* border: 2px solid black; */
