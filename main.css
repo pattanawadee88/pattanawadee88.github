@@ -26,6 +26,7 @@ h2{
     font-weight: 700;
     letter-spacing: 10px; 
     font-family: 'Playfair Display', serif;
+
 }
 h3{
     color: black;
@@ -41,6 +42,7 @@ a{
     color: var( --primaryTextColor);
     cursor:pointer;
     text-decoration: none;
+    letter-spacing: 2px; 
 }
 a:hover{
     border-bottom: 2px solid black;
@@ -98,7 +100,7 @@ nav ul{
     border-left: 2px solid black;
     padding: 1em;
     text-align: center;
-    font-size: 2vw;
+    font-size: 3vw;
 }
 #gtihub-btn{
     border-right: 2px solid black;
@@ -114,12 +116,8 @@ nav ul{
 }
 
 #projects{
-    padding: 3em;
+    padding: 1em;
 }
-#projects-container{
-    padding: 2em;
-}
-
 .card-img-top{
     width: 100%;    
 }
@@ -192,7 +190,11 @@ footer p{
     #about{
         margin-top: 9em;
     }
-    #projects-container{
-        flex-wrap: nowrap;
+    #projects{
+        padding: 3em;
     }
+    #projects-container{
+        padding: 2em;
+    }
+    
 }
