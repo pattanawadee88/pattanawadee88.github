@@ -23,15 +23,19 @@
     <link rel="stylesheet" href="main.css">
 </head>
 <body>
+
+  <header>
+    <nav role="navigation">
+      <ul>
+          <li><a href="#hero-header">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+      </ul>
+    </nav>
+  </header>
+  
     <main>
         <section id="hero-header">
-            <nav id="main-nav" role="navigation">
-                <ul>
-                    <li><a class="navie" id="home-nav" href="#hero-header">Home</a></li>
-                    <li><a class="navie" id="about-nav"   href="#about">About</a></li>
-                    <li><a class="navie" href="#projects-container">Projects</a></li>
-                </ul>
-            </nav>
             <div id="hero-text" class="slide-left">
                 <h1>Hi,there! <br> I'm Pat.</h1>
                 <p>who enjoy making Responsive Websites</p>
@@ -55,38 +59,32 @@
         </section>
 
   
-        <section id="projects-container">
-            <h2 class="scroll slide-right">Projects</h2> 
-            <div class="row row-cols-1 row-cols-md-3 g-4 scroll">
+        <section id="projects">
+            <h2 class="scroll slide-right">Lastest <br>Projects</h2> 
+            <div id="projects-container" class="row row-cols-1 row-cols-md-3 g-4 scroll">
                 <div class="col">
-                  <div class="card h-30">
+                    <a target="_blank" href="https://pattanawadee88.github.io/APalette/"><img src="./images/project1.png" class="card-img-top" alt="APalette project"></a>
                     <div class="card-body">
                       <h5 class="card-title">APalette:</h5>
                       <p class="card-text">APalette is a single page web application. This project is built for users to pick the right color palette for their web design.</p>
                       <button type="button" class="btn "><a href="https://github.com/pattanawadee88/APalette">View on Github</a></button>
                     </div>
-                    <a target="_blank" href="https://pattanawadee88.github.io/APalette/"><img src="./images/project1_1.png" class="card-img-bottom" alt="APalette project"></a>
-                  </div>
                 </div>
                 <div class="col">
-                  <div class="card h-30">
-                    <a target="_blank" href="https://pattanawadee88.github.io/Tipcalculatorapp/"><img src="./images/project2_1.png" class="card-img-top" alt="Tip calculator project"></a>
+                    <a target="_blank" href="https://pattanawadee88.github.io/Tipcalculatorapp/"><img src="./images/project2.png" class="card-img-top" alt="Tip calculator project"></a>
                     <div class="card-body">
                       <h5 class="card-title">Tip Calculator:</h5>
                       <p class="card-text">This is a small application that lets a user to calculate tip.</p>
                       <button type="button" class="btn "><a href="https://github.com/pattanawadee88/Tipcalculatorapp">View on Github</a></button>
                     </div>
-                  </div>
                 </div>
                 <div class="col">
-                  <div class="card h-30">
+                    <a target="_blank" href="https://pattanawadee88.github.io/TheNews/"><img src="./images/project3.png" class="card-img-top" alt="TheNews project"></a>
                     <div class="card-body">
                       <h5 class="card-title">The News:</h5>
                       <p class="card-text">TheNews is a news website that integrating with a New York news API.</p>
                       <button type="button" class="btn "><a href="https://github.com/pattanawadee88/TheNews">View on Github</a></button>
                     </div>
-                    <a target="_blank" href="https://pattanawadee88.github.io/TheNews/"><img src="./images/project3.png" class="card-img-bottom" alt="TheNews project"></a>
-                  </div>
                 </div>
               </div>
         </section>
@@ -95,8 +93,8 @@
     <footer role="contentinfo">
         <p>@2021 Designed & Buit By Pattanawadee</p>
     </footer>
-    <!-- D3 js -->
-    <script src="https://d3js.org/d3.v7.min.js"></script>
-    <script src="App.js"></script>
+  <!-- D3 js -->
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <script src="App.js"></script>
 </body>
 </html>
