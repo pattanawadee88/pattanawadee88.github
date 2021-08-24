@@ -98,7 +98,7 @@ nav ul{
     border-top: 2px solid black;
     border-bottom: 2px solid black;
     border-left: 2px solid black;
-    padding: 1em;
+    padding: 0.1em;
     text-align: center;
     font-size: 3vw;
 }
