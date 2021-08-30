@@ -37,8 +37,21 @@ h3{
     color: black;
     font-family: 'Sansita', sans-serif;
 } */
+h4{
+    font-size: 2rem;
+    font-family: 'Playfair Display', serif;
+}
 p{
     font-size: 1.4rem;
+}
+.progress-tag{
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    border: 2px solid rgb(212, 58, 58);
+    border-radius: 5px;
+    color: white;
+    background-color: rgb(212, 58, 58);
+    text-align: center;
 }
 a{
     color: var( --primaryTextColor);
@@ -125,9 +138,33 @@ nav ul{
 }
 .card-title{
     font-family: 'Courier Prime', monospace;
-    font-weight: 700;
     font-size: 2rem;
+}
+#projects-container{
+    display: flex;
+    flex-direction: column;
+}
+table{
+    width: 100%;
+    margin-top: 2em;
+}
+.title{
+    font-weight: 600;
+}
+td{
     color: black;
+}
+tr{
+    display:  flex;
+    padding: 0.6em;
+    justify-content: space-between;
+    border-bottom: 2px solid black;
+}
+tr:last-child{
+    border-bottom: 3px double black;
+}
+.tools-logo{
+    width: 4vw;
 }
 footer{
     text-align: center;
@@ -184,7 +221,7 @@ footer p{
     }
 }
 /* Desktop */
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 900px) {
     #hero-header,
     #hero-text{
         height: fit-content;
@@ -196,7 +233,9 @@ footer p{
         padding: 3em;
     }
     #projects-container{
-        padding: 2em;
+        display: grid;
+        grid-template-columns: auto auto;
+        gap: 2em;
     }
     
 }
